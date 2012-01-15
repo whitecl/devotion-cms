@@ -1,0 +1,3 @@
+# Run this in rails console to make an admin user
+
+AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
