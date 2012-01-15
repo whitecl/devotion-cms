@@ -16,7 +16,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# Using thin + foreman for web server
+gem 'thin', '~> 1.3.1'
+gem 'foreman', '~> 0.31.0'
+
+gem 'jquery-rails', '~> 1.0.19'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
