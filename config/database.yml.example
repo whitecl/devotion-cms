@@ -1,0 +1,20 @@
+default: &default
+  adapter:   mysql
+  encoding:  utf8
+  reconnect: true
+  database:  devotions_development
+  pool:      20
+  user:  root
+  password:  root
+  host:      localhost
+
+development: &development
+ <<: *default
+
+test: &test
+ <<: *development
+ database: devotions_test
+
+production: &production
+ <<: *default
+ database: devotions_production
