@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  day_no: 1
+  publish_date: 2012-01-16
+  coordinator_notes: MyText
+
+two:
+  day_no: 1
+  publish_date: 2012-01-16
+  coordinator_notes: MyText
