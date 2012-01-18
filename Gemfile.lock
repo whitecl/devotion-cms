@@ -169,6 +169,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   coffee-rails (~> 3.1.1)
+  devise (~> 1.5.3)
   foreman (~> 0.31.0)
   jquery-rails (~> 1.0.19)
   meta_search (>= 1.1.0.pre)

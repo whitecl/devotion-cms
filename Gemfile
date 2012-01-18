@@ -27,6 +27,9 @@ gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git' # In a
 gem 'sass-rails',   '~> 3.1.5'
 gem "meta_search",  '>= 1.1.0.pre'
 
+# Active admin installs devise anyway, but since we're using it for contributors, let's explicitly set the version.
+gem 'devise', '~> 1.5.3'
+
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
