@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  devotion_day: 
+  title: MyString
+  bible_text: MyText
+  bible_book: MyString
+  bible_chapter: MyString
+  bible_verse: MyString
+  content: MyText
+  your_name: MyString
+  about_me: MyText
+
+two:
+  devotion_day: 
+  title: MyString
+  bible_text: MyText
+  bible_book: MyString
+  bible_chapter: MyString
+  bible_verse: MyString
+  content: MyText
+  your_name: MyString
+  about_me: MyText

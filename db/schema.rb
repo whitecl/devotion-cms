@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120118020734) do
+ActiveRecord::Schema.define(:version => 20120120113343) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -79,6 +79,23 @@ ActiveRecord::Schema.define(:version => 20120118020734) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "devotions", :force => true do |t|
+    t.integer  "contributor_id"
+    t.integer  "devotion_day_id"
+    t.string   "title"
+    t.text     "bible_text"
+    t.string   "bible_book"
+    t.string   "bible_chapter"
+    t.string   "bible_verse"
+    t.text     "content"
+    t.string   "your_name"
+    t.text     "about_me"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "devotions", ["devotion_day_id"], :name => "index_devotions_on_devotion_day_id"
 
   create_table "seasons", :force => true do |t|
     t.string   "title"
