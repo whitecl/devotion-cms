@@ -1,0 +1,7 @@
+<h2><%= day.season.title %> Day <%= day.day_no.to_s %> - <%= day.publish_date %></h2>
+
+<p><%= day.coordinator_notes %></p>
+
+<% day.devotions.each do |devotion| %>
+<%= render 'devotions/devotion', devotion: devotion %>
+<% end %>
