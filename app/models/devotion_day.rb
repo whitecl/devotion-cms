@@ -3,4 +3,8 @@ class DevotionDay < ActiveRecord::Base
   has_many :devotions
 
   scope :published, where("publish_date <= \"#{Date.today}\"")
+
+  def published?
+    self.publish_date <= Date.today
+  end
 end
