@@ -1,6 +1,6 @@
 class DaysController < ApplicationController
   def index
-    @days = DevotionDay.published
+    @days = DevotionDay.published.order('publish_date DESC')
   end
 
   def show

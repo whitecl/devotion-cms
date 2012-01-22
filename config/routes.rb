@@ -9,7 +9,11 @@ DevotionCms::Application.routes.draw do
 
   resources :days
 
-  resources :devotions
+  resources :devotions do
+    member do
+      get 'preview'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

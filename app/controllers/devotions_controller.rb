@@ -12,6 +12,13 @@ class DevotionsController < ApplicationController
     redirect_to days_path unless @devotion && @devotion.published?
   end
 
+  def preview
+    @devotion = Devotion.find(params[:id])
+
+    # Preview is only ok if devotion is owned by logged-in contributor (maybe coordinators in the future)
+    redirect_to days_path unless @devotion.contributor == current_contributor
+  end
+
   def new
     @contributor = current_contributor
     @devotion = @contributor.devotions.new
@@ -22,7 +29,7 @@ class DevotionsController < ApplicationController
     @devotion = @contributor.devotions.new(params[:devotion])
 
     if @devotion.save
-      redirect_to days_path # should go to preview
+      redirect_to preview_devotion_path(@devotion)
     else
       render 'new'
     end
