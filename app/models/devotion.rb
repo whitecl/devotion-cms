@@ -9,6 +9,10 @@ class Devotion < ActiveRecord::Base
   end
 
   def full_verse_location
-    bible_book.to_s + " " + bible_chapter.to_s + ":" + bible_verse.to_s
+    if !bible_book.empty? && !bible_chapter.empty? && !bible_verse.empty?
+      bible_book.to_s + " " + bible_chapter.to_s + ":" + bible_verse.to_s
+    else
+      ''
+    end
   end
 end

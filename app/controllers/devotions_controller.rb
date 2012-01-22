@@ -34,4 +34,24 @@ class DevotionsController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @contributor = current_contributor
+    # ask in contributor scope to make sure it belongs to this contributor
+    @devotion = @contributor.devotions.find(params[:id])
+
+    redirect_to days_path unless @devotion
+  end
+
+  def update
+    @contributor = current_contributor
+    # ask in contributor scope to make sure it belongs to this contributor
+    @devotion = @contributor.devotions.find(params[:id])
+
+    if @devotion.update_attributes(params[:devotion])
+      redirect_to preview_devotion_path(@devotion)
+    else
+      render 'edit'
+    end
+  end
 end
