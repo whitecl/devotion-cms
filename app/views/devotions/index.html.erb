@@ -1,0 +1,6 @@
+<h2>My Devotions</h2>
+<ul>
+  <% @devotions.each do |devotion| %>
+  <li><%= link_to devotion.title, devotion %></li>
+  <% end %>
+</ul>

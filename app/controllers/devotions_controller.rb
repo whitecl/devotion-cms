@@ -2,8 +2,8 @@ class DevotionsController < ApplicationController
   before_filter :authenticate_contributor!, except: [:show]
 
   def index
-    # Let's use this action for 'my devotions'
-    redirect_to days_path
+    @contributor = current_contributor
+    @devotions = @contributor.devotions
   end
 
   def show

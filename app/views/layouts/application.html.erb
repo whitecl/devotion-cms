@@ -23,7 +23,7 @@
 
     <% if contributor_signed_in? %>
     <div>
-      <p>My Devotions</p>
+      <p><%= link_to 'My Devotions', devotions_path %></p>
       <p><%= link_to 'New Devotion', new_devotion_path %></p>
     </div>
     <% end %>
