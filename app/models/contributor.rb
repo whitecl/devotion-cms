@@ -9,4 +9,8 @@ class Contributor < ActiveRecord::Base
                   :first_name, :last_name, :coordinator_approved
 
   has_many :devotions
+
+  def name
+    first_name.to_s + ' ' + last_name.to_s
+  end
 end

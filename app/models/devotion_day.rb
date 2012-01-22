@@ -7,4 +7,8 @@ class DevotionDay < ActiveRecord::Base
   def published?
     self.publish_date <= Date.today
   end
+
+  def title
+    season.title.to_s + ' Day ' + self.day_no.to_s 
+  end
 end

@@ -2,8 +2,8 @@ ActiveAdmin.register Devotion do
 
   form do |f|
     f.inputs "Administrative" do
-      f.input :contributor_id
-      f.input :devotion_day_id
+      f.input :contributor
+      f.input :devotion_day
     end
 
     f.inputs "Devotion Content" do
