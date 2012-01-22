@@ -1,4 +1,8 @@
+<% if multi %>
+<h2><%= link_to "#{day.season.title} Day #{day.day_no.to_s} - #{day.publish_date}", day_path(day) %></h2>
+<% else %>
 <h2><%= day.season.title %> Day <%= day.day_no.to_s %> - <%= day.publish_date %></h2>
+<% end %>
 
 <p><%= day.coordinator_notes %></p>
 
