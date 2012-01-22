@@ -1,4 +1,6 @@
 DevotionCms::Application.routes.draw do
+  mount Rich::Engine => '/rich'
+
   devise_for :contributors
 
   ActiveAdmin.routes(self)

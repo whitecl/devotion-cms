@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120120113343) do
+ActiveRecord::Schema.define(:version => 20120122141228) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -96,6 +96,18 @@ ActiveRecord::Schema.define(:version => 20120120113343) do
   end
 
   add_index "devotions", ["devotion_day_id"], :name => "index_devotions_on_devotion_day_id"
+
+  create_table "rich_rich_images", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+  end
 
   create_table "seasons", :force => true do |t|
     t.string   "title"

@@ -8,3 +8,4 @@
 //= require jquery_ujs
 //= require days
 //= require devotions
+//= require rich
