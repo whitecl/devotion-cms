@@ -2,6 +2,8 @@ class Devotion < ActiveRecord::Base
   belongs_to :contributor
   belongs_to :devotion_day
 
+  validates_presence_of :title, :content
+
   def published?
     (self.devotion_day && self.devotion_day.published?)
   end

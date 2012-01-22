@@ -20,6 +20,22 @@
 
   <div>
     <p>Navigation</p>
+
+    <% if contributor_signed_in? %>
+    <div>
+      <p>My Devotions</p>
+      <p><%= link_to 'New Devotion', new_devotion_path %></p>
+    </div>
+    <% end %>
+
+    <div>
+      <% if contributor_signed_in? %>
+      <p><%= link_to 'Log Out', destroy_contributor_session_path, method: :delete %></p>
+      <% else %>
+      <p><%= link_to 'Log In', new_contributor_session_path %></p>
+      <p><%= link_to 'Sign Up', new_contributor_registration_path %></p>
+      <% end %>
+    </div>
   </div>
 
 </body>

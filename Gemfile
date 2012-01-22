@@ -28,6 +28,7 @@ gem 'sass-rails',   '~> 3.1.5'
 gem "meta_search",  '>= 1.1.0.pre'
 
 # This is for forms and rich text forms
+gem 'formtastic', '~> 2.0.2'
 gem 'rich', '~> 0.0.8'
 
 # Active admin installs devise anyway, but since we're using it for contributors, let's explicitly set the version.

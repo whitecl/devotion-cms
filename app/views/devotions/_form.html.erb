@@ -1,0 +1,16 @@
+<%= semantic_form_for @devotion do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :title %>
+    <%= f.input :bible_book %>
+    <%= f.input :bible_chapter %>
+    <%= f.input :bible_verse %>
+    <%= f.input :bible_text %>
+    <%= f.input :content, as: :rich %>
+    <%= f.input :your_name %>
+    <%= f.input :about_me %>
+  <% end %>
+  <p>Your devotion can only be seen by you and the 40 Days coordinators until the day it is published.</p>
+  <%= f.buttons do %>
+    <%= f.submit 'Save and Preview' %>
+  <% end %>
+<% end %>
