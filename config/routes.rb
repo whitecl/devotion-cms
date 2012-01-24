@@ -15,6 +15,9 @@ DevotionCms::Application.routes.draw do
     end
   end
 
+  post 'subscriptions', :to => 'subscriptions#create', :as => 'subscribers'
+  get 'subscriptions/cancel/:private_code', :to => 'subscriptions#destroy', :as => 'cancel_subscription'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

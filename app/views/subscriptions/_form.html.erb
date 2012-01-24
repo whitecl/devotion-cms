@@ -1,0 +1,6 @@
+<% @subscriber = Subscriber.new unless @subscriber %>
+<p>Sign up to receive 40 Days in a daily email:</p>
+<%= semantic_form_for @subscriber do |f| %>
+  <%= f.inputs :email %>
+  <%= f.submit 'Sign Up!' %>
+<% end %>
