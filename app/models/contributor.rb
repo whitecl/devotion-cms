@@ -10,7 +10,13 @@ class Contributor < ActiveRecord::Base
 
   has_many :devotions
 
+  after_create :add_to_subscribers
+
   def name
     first_name.to_s + ' ' + last_name.to_s
+  end
+
+  def add_to_subscribers
+    Subscriber.create({:email => self.email})
   end
 end
