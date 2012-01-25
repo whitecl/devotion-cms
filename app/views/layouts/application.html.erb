@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>DevotionCms</title>
+		<title>40 Days - Exodus Church For Bloomington</title>
 		<%= stylesheet_link_tag    "application" %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-
-		<div><%= link_to '40 Days', days_path %> - App Header goes here</div>
+		<div id="header">
+			<!--<%= link_to '40 Days', days_path %>-->
+			<div id="logo_container">
+				<%= image_tag "logo.png", {:alt => "logo", :id => "logo"} %>
+			</div>
+			<div id="reflections">
+				<div>
+					Daily Reflections for the Exodus Community
+				</div>
+			</div>
+			<div id="about">
+				<div>
+					<%= link_to 'About 40 Days', 'about.html' %>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both" />
 
 		<p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p>

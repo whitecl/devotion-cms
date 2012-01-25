@@ -6,6 +6,7 @@
  *= require formtastic
  *= require rich/editor
  *= require_self
+ *= require header
  *= require days
  *= require devotions
 */

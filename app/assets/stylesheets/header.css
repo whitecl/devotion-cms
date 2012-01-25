@@ -1,0 +1,51 @@
+div#header {
+	height : 170px;
+	width : 1024px;
+	margin : auto;
+	margin-top : 1em;
+	position : relative;
+	outline : 1px solid gold;
+}
+div#header>div {
+	background : #7b4099;
+	border-radius : 5px;
+	right : 0px;
+}
+div#header div {
+	position : absolute;
+}
+div#logo_container {
+	height : 128px;
+	right : auto;
+	width : 100%;
+}
+img#logo {
+	position : absolute;
+	display : block;
+	top : 0.9em;
+	left: 1em;
+}
+div#reflections {
+	background : #70bc34 !important;
+	height : 70px;
+	width : 711px;
+	top : 77px;
+}
+div#reflections div {
+	top : 26px;
+	left : 26px;
+	font-size : 1.25em;
+}
+div#about {
+	height : 35px;
+	text-align : center;
+	top : 135px;
+	width : 150px;
+}
+div#about div {
+	top : 10px;
+	left : 27px;
+}
+div#about div a {
+	color : white;
+}
