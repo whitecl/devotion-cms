@@ -6,6 +6,7 @@ resque_config = YAML.load_file(File.join(Rails.root, 'config', 'resque-pw.yml'))
 
 # This shows resque-web at /resque
 require 'resque/server'
+require 'resque/scheduler'
 Resque::Server.use Rack::Auth::Basic do |username, password|
  username == resque_config['username'] && password == resque_config['password']
 end

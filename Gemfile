@@ -36,6 +36,7 @@ gem 'devise', '~> 1.5.3'
 
 # Used for queued mail sending
 gem 'resque', '~> 1.19.0'
+gem 'resque-scheduler', '~> 1.9.9'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
