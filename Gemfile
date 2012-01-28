@@ -34,6 +34,9 @@ gem 'rich', '~> 0.0.8'
 # Active admin installs devise anyway, but since we're using it for contributors, let's explicitly set the version.
 gem 'devise', '~> 1.5.3'
 
+# Used for queued mail sending
+gem 'resque', '~> 1.19.0'
+
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
