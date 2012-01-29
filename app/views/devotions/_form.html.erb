@@ -10,7 +10,14 @@
     <%= f.input :about_me %>
 
     <%= f.inputs :for => :videos do |v|%>
-      <%= v.input :source %>
+
+      <% if v.object.new_record? %>
+      <p>Add a new video:</p>
+      <% else %>
+      <p>Existing Video:</p>
+      <% end %>
+
+      <%= v.input :source, as: :select, collection: Video.allowed_video_sources %>
       <%= v.input :code %>
     <% end %>
   <% end %>

@@ -22,6 +22,7 @@ class DevotionsController < ApplicationController
   def new
     @contributor = current_contributor
     @devotion = @contributor.devotions.new
+    2.times{ @devotion.videos.build }
   end
 
   def create
@@ -29,6 +30,7 @@ class DevotionsController < ApplicationController
     @devotion = @contributor.devotions.new(params[:devotion])
 
     if @devotion.save
+      delete_videos_if_empty
       redirect_to preview_devotion_path(@devotion)
     else
       render 'new'
@@ -40,6 +42,8 @@ class DevotionsController < ApplicationController
     # ask in contributor scope to make sure it belongs to this contributor
     @devotion = @contributor.devotions.find(params[:id])
 
+    @devotion.videos.build
+
     redirect_to days_path unless @devotion
   end
 
@@ -49,9 +53,18 @@ class DevotionsController < ApplicationController
     @devotion = @contributor.devotions.find(params[:id])
 
     if @devotion.update_attributes(params[:devotion])
+      delete_videos_if_empty
       redirect_to preview_devotion_path(@devotion)
     else
       render 'edit'
+    end
+  end
+
+  private
+
+  def delete_videos_if_empty
+    @devotion.videos.each do |video|
+      video.delete_if_empty
     end
   end
 end
