@@ -1,8 +1,11 @@
 class Devotion < ActiveRecord::Base
   belongs_to :contributor
   belongs_to :devotion_day
+  has_many :videos
 
   validates_presence_of :title, :content
+
+  accepts_nested_attributes_for :videos, allow_destroy: true
 
   def published?
     (self.devotion_day && self.devotion_day.published?)
@@ -15,4 +18,5 @@ class Devotion < ActiveRecord::Base
       ''
     end
   end
+
 end

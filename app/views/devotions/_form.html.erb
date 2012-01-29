@@ -8,6 +8,11 @@
     <%= f.input :content, as: :rich %>
     <%= f.input :your_name %>
     <%= f.input :about_me %>
+
+    <%= f.inputs :for => :videos do |v|%>
+      <%= v.input :source %>
+      <%= v.input :code %>
+    <% end %>
   <% end %>
   <p>Your devotion can only be seen by you and the 40 Days coordinators until the day it is published.</p>
   <%= f.buttons do %>

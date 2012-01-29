@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120124025343) do
+ActiveRecord::Schema.define(:version => 20120128215925) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -127,5 +127,15 @@ ActiveRecord::Schema.define(:version => 20120124025343) do
 
   add_index "subscribers", ["email"], :name => "index_subscribers_on_email"
   add_index "subscribers", ["private_code"], :name => "index_subscribers_on_private_code"
+
+  create_table "videos", :force => true do |t|
+    t.string   "source"
+    t.string   "code"
+    t.integer  "devotion_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "videos", ["devotion_id"], :name => "index_videos_on_devotion_id"
 
 end
