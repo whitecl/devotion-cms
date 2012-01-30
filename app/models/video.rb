@@ -1,19 +1,20 @@
 class Video < ActiveRecord::Base
+  require 'oembed'
   belongs_to :devotion
 
-  validate :source_is_valid
-
-  def self.allowed_video_sources
-    ['youtube', 'vimeo']
-  end
-
-  def source_is_valid
-    Video.allowed_video_sources.include? self.source
-  end
-
   def delete_if_empty
-    if self.source.nil? || self.source.empty? || self.code.nil? || self.code.empty?
+    if self.url.nil? || self.url.empty?
       self.delete
+    end
+  end
+
+  def embed_block
+    vdata = OEmbed::ProviderDiscovery.get(self.url)
+
+    if vdata.html && !vdata.html.empty?
+      vdata.html
+    else
+      ''
     end
   end
 

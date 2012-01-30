@@ -8,4 +8,8 @@
 <h4>About <%= devotion.your_name %></h4>
 <p><%= devotion.about_me %></p>
 
+<% devotion.videos.each do |video| %>
+<%= video.embed_block.html_safe %>
+<% end %>
+
 <p><%= link_to 'Permanent link to this devotion', devotion %></p>

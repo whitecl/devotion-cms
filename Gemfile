@@ -38,6 +38,9 @@ gem 'devise', '~> 1.5.3'
 gem 'resque', '~> 1.19.0'
 gem 'resque-scheduler', '~> 1.9.9'
 
+# For videos
+gem 'ruby-oembed', '~> 0.8.5'
+
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 

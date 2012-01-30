@@ -17,8 +17,7 @@
       <p>Existing Video:</p>
       <% end %>
 
-      <%= v.input :source, as: :select, collection: Video.allowed_video_sources %>
-      <%= v.input :code %>
+      <%= v.input :url %>
     <% end %>
   <% end %>
   <p>Your devotion can only be seen by you and the 40 Days coordinators until the day it is published.</p>
