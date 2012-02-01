@@ -7,6 +7,8 @@ class Devotion < ActiveRecord::Base
 
   accepts_nested_attributes_for :videos, allow_destroy: true
 
+  has_attached_file :attachment
+
   def published?
     (self.devotion_day && self.devotion_day.published?)
   end

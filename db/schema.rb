@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120130011906) do
+ActiveRecord::Schema.define(:version => 20120201020242) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -93,6 +93,10 @@ ActiveRecord::Schema.define(:version => 20120130011906) do
     t.text     "about_me"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "attachment_file_name"
+    t.integer  "attachment_file_size"
+    t.string   "attachment_content_type"
+    t.datetime "attachment_updated_at"
   end
 
   add_index "devotions", ["devotion_day_id"], :name => "index_devotions_on_devotion_day_id"

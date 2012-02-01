@@ -15,6 +15,7 @@ ActiveAdmin.register Devotion do
       f.input :content, as: :rich
       f.input :your_name
       f.input :about_me
+      f.input :attachment, as: :file
     end
 
     f.buttons

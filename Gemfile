@@ -41,6 +41,9 @@ gem 'resque-scheduler', '~> 1.9.9'
 # For videos
 gem 'ruby-oembed', '~> 0.8.5'
 
+# Attaching files - rich already install paperclip, but lets get an explicit version.
+gem 'paperclip', '~> 2.5.2'
+
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 

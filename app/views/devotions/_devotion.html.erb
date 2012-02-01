@@ -12,4 +12,8 @@
 <%= video.embed_block.html_safe %>
 <% end %>
 
+<% if devotion.attachment_file_name %>
+<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
+<% end %>
+
 <p><%= link_to 'Permanent link to this devotion', devotion %></p>
