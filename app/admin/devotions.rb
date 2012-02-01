@@ -1,5 +1,13 @@
 ActiveAdmin.register Devotion do
 
+  index do
+    column :contributor
+    column :devotion_day
+    column :title
+    column :your_name
+    default_actions
+  end
+
   form do |f|
     f.inputs "Administrative" do
       f.input :contributor
