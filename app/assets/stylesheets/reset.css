@@ -50,3 +50,35 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+/******************
+ * Customizations
+ ******************/
+body>* {
+	position : relative;
+	clear : both;
+	width : 1024px;
+	margin : auto;
+	margin-top : 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size : 4em;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+h2 {
+	font-size : 3.5em;
+}
+h3 {
+	font-size : 3em;
+}
+h4 {
+	font-size : 2.5em;
+}
+h5 {
+	font-size : 2em;
+}
+h6 {
+	font-size : 1.5em;
+}

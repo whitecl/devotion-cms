@@ -1,13 +1,9 @@
 div#header {
-	height : 170px;
-	width : 1024px;
-	margin : auto;
-	margin-top : 1em;
-	position : relative;
-	outline : 1px solid gold;
+	height : 160px;
 }
 div#header>div {
-	background : #7b4099;
+	-moz-border-radius : 5px;
+	-webkit-border-radius : 5px;
 	border-radius : 5px;
 	right : 0px;
 }
@@ -15,6 +11,7 @@ div#header div {
 	position : absolute;
 }
 div#logo_container {
+	background : #7b4099;
 	height : 128px;
 	right : auto;
 	width : 100%;
@@ -26,7 +23,7 @@ img#logo {
 	left: 1em;
 }
 div#reflections {
-	background : #70bc34 !important;
+	background : #d0b7dd;
 	height : 70px;
 	width : 711px;
 	top : 77px;
@@ -37,9 +34,10 @@ div#reflections div {
 	font-size : 1.25em;
 }
 div#about {
+	background-color : #b7f475;
 	height : 35px;
 	text-align : center;
-	top : 135px;
+	top : 125px;
 	width : 150px;
 }
 div#about div {

@@ -1,0 +1,30 @@
+.day {
+	padding : 10px;
+}
+.day_header * {
+	display : block;
+	font-size : 48px;
+	float : left;
+	font-family : Times New Roman, serif;
+	height : 48px;
+	padding-top : 8px;
+	padding-bottom : 8px;
+}
+.day_header a {
+	background-color : #b7f475;
+	color : white;
+	margin : auto;
+	text-align : center;
+	text-decoration : none;
+	width : 70px;
+}
+.day_header span {
+	padding-top : 10px;
+	margin-left : 20px;
+}
+
+.day_intro {
+	clear : both;
+	font-style : italic;
+	padding : 10px;
+}

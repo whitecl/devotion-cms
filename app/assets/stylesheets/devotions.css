@@ -1,0 +1,27 @@
+.devotion {
+	margin-bottom : 20px;
+}
+.devotion * {
+	padding : 5px;
+}
+.devotion_title {
+	border-bottom : 5px solid #d0b7dd;
+}
+
+.devotion_author {
+	text-align : right;
+	border-bottom : 5px solid #b7f475;
+	font-size : 1.5em;
+}
+
+.devotion_verse {
+	padding : 20px;
+}
+.verse_reference,
+.devotion_author_bio {
+	font-style : italic;
+}
+.devotion_verse,
+.bio_label {
+	font-weight : bold;
+}

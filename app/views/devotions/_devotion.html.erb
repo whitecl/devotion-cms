@@ -1,19 +1,36 @@
-<h3><%= devotion.title %> by <%= devotion.your_name %></h3>
+<div class="devotion">
+	<h4 class="devotion_title"><%= devotion.title %></h4>
+	<h5 class="devotion_author"><%= devotion.your_name %></h5>
 
-<p><%= devotion.full_verse_location %></p>
-<p><%= simple_format(devotion.bible_text) %></p>
+	<div class="devotion_verse">
+		<span class="verse_text">
+			<%= simple_format(devotion.bible_text) %>
+		</span>
+		<span class="verse_reference">
+			<%= devotion.full_verse_location %>
+		</span>
+	</div>
 
-<p><%= devotion.content.html_safe %></p>
+	<div class="devotion_text">
+		<%= devotion.content.html_safe %>
+	</div>
 
-<h4>About <%= devotion.your_name %></h4>
-<p><%= devotion.about_me %></p>
+	<div class="devotion_author_bio">
+		<span class="bio_label">
+			About <%= devotion.your_name %>:
+		</span>
+		<span class="bio_text">
+			<%= devotion.about_me %>
+		</span>
+	</div>
 
-<% devotion.videos.each do |video| %>
-<%= video.embed_block.html_safe %>
-<% end %>
+	<% devotion.videos.each do |video| %>
+	<%= video.embed_block.html_safe %>
+	<% end %>
 
-<% if devotion.attachment_file_name %>
-<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
-<% end %>
+	<% if devotion.attachment_file_name %>
+	<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
+	<% end %>
 
-<p><%= link_to 'Permanent link to this devotion', devotion %></p>
+	<p><%= link_to 'Permanent link to this devotion', devotion %></p>
+</div>

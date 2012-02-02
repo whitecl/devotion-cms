@@ -23,36 +23,74 @@
 				</div>
 			</div>
 		</div>
-		<div style="clear:both" />
 
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-
-		<div>
-			<p>This DIV is for the content area</p>
-			<%= yield %>
-		</div>
-
-		<div>
-			<p>Navigation</p>
-
-			<% if contributor_signed_in? %>
-				<div>
-					<p><%= link_to 'My Devotions', devotions_path %></p>
-					<p><%= link_to 'New Devotion', new_devotion_path %></p>
+		<div id="main_body">
+			<% if !notice.nil? %>
+				<div class="notice">
+					<%= notice %>
+				</div>
+			<% end %>
+			<% if !alert.nil? %>
+				<div class="alert">
+					<%= alert %>
 				</div>
 			<% end %>
 
-			<div>
-				<% if contributor_signed_in? %>
-					<p><%= link_to 'Contributor Log Out', destroy_contributor_session_path, method: :delete %></p>
-				<% else %>
-					<%= render 'subscriptions/form' %>
-					<p><%= link_to 'Contributor Log In', new_contributor_session_path %></p>
-					<p><%= link_to 'Contributor Sign Up', new_contributor_registration_path %></p>
-				<% end %>
+			<div id="content_container">
+				<%= yield %>
+			</div>
+
+			<div id="sidebar">
+				<div id="subscription">
+					<h6>Subscribe:</h6>
+					<form id="email_subscription" class="formatastic" action="/subscriptions/">
+						<label for="email">
+							By Email:
+						</label>
+						<input type="text" name="email" />
+						<input type="submit" value="Go!" />
+					</form>
+					<!--
+					<div id="rss_subscription">
+						<label>
+							RSS:
+						</label>
+						<a href="/rss.xml">
+							<img src="../../assets/images/rss.png" />
+						</a>
+					</div>
+					-->
+				</div>
+				<div id="archives">
+					<h6>Devotions</h6>
+					<div>
+						Archive Calendar goes here
+					</div>
+				</div>
+				<div id="navigation">
+					<h6>User Menu</h6>
+					<ul>
+						<% if contributor_signed_in? %>
+							<li>
+								<%= link_to 'My Devotions', devotions_path %>
+							</li>
+							<li>
+								<%= link_to 'New Devotion', new_devotion_path %>
+							</li>
+							<li>
+								<%= link_to 'Contributor Log Out', destroy_contributor_session_path, method: :delete %>
+					<% else %>
+							<li>
+								<%= render 'subscriptions/form' %>
+								<%= link_to 'Contributor Log In', new_contributor_session_path %>
+							</li>
+							<li>
+								<%= link_to 'Contributor Sign Up', new_contributor_registration_path %>
+							</li>
+						<% end %>
+					</ul>
+				</div>
 			</div>
 		</div>
-
 	</body>
 </html>

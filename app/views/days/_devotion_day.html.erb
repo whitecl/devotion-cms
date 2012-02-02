@@ -1,11 +1,30 @@
-<% if multi %>
-<h2><%= link_to "#{day.season.title} Day #{day.day_no.to_s} - #{day.publish_date}", day_path(day) %></h2>
-<% else %>
-<h2><%= day.season.title %> Day <%= day.day_no.to_s %> - <%= day.publish_date %></h2>
-<% end %>
+<div class="day">
+	<div class="day_header">
+	<% if multi %>
 
-<p><%= day.coordinator_notes %></p>
+		<%= link_to "#{day.day_no.to_s}", day_path(day) %>
+		<span>
+			Day <%= day.day_no.to_s %>
+		</span>
 
-<% day.devotions.each do |devotion| %>
-<%= render 'devotions/devotion', devotion: devotion %>
-<% end %>
+
+	<% else %>
+
+		<%= link_to "#{day.day_no.to_s}", day_path(day) %>
+		<span>
+			<%= day.season.title %> - Day <%= day.day_no.to_s %>
+		</span>
+
+	<% end %>
+	</div>
+
+	<div class="day_intro">
+		<p><%= day.coordinator_notes %></p>
+	</div>
+
+	<div class="days_devotions">
+		<% day.devotions.each do |devotion| %>
+			<%= render 'devotions/devotion', devotion: devotion %>
+		<% end %>
+	</div>
+</div>

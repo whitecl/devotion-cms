@@ -7,6 +7,7 @@
  *= require rich/editor
  *= require_self
  *= require header
+ *= require main_body
  *= require days
  *= require devotions
 */
