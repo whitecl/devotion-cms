@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>40 Days - Exodus Church For Bloomington</title>
+		<script type="text/javascript" src="../../assets/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="../../assets/javascripts/jquery_ujs.js"></script>
+		<script type="text/javascript" src="../../assets/javascripts/days.js"></script>
+		<script type="text/javascript" src="../../assets/javascripts/devotions.js"></script>
+		<script type="text/javascript" src="../../assets/javascripts/rich.js"></script>
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/application.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/reset.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/formtastic.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/rich/editor.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/header.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/main_body.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/days.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/stylesheets/devotions.css" />
+	</head>
+	<body>
+		<div id="header">
+			<!--<%= link_to '40 Days', days_path %>-->
+			<div id="logo_container">
+				<!-- <%= image_tag "logo.png", {:alt => "logo", :id => "logo"} %> -->
+				<img alt='logo' id='logo' src='../../assets/images/logo.png' />
+			</div>
+			<div id="reflections">
+				<div>
+					Daily Reflections for the Exodus Community
+				</div>
+			</div>
+			<div id="about">
+				<div>
+					<!-- <%= link_to 'About 40 Days', 'about.html' %> -->
+					<a href='/about.html'>About 40 Days</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="main_body">
+<!--
+			<!-~-
+				<% if notice? %>
+			-~->
+			<div class="notice">
+				<!-~-
+					<%= notice %>
+				-~->
+				This is a notice.
+			</div>
+			<!-~-
+				<% end %>
+				<% if alert? %>
+			-~->
+			<div class="alert">
+				<!-~-
+				<%= alert %>
+				-~->
+				This is an alert.
+			</div>
+			<!-~-
+				<% end %>
+			-~->
+			-->
+
+			<div id="content_container">
+				<div class="day">
+					<div class="day_header">
+						<a href="/day/30">30</a>
+						<span>Thirty</span>
+					</div>
+					<div class="day_intro">
+						This would be the intro text that a coordinator put in to introduce
+						the day............ This would be the intro text that a coordinator
+						put in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............
+					</div>
+					<div class="days_devotions">
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<div class="day_header">
+						<a href="/day/20">20</a>
+						<span>Twenty</span>
+					</div>
+					<div class="day_intro">
+						This would be the intro text that a coordinator put in to introduce
+						the day............ This would be the intro text that a coordinator
+						put in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............
+					</div>
+					<div class="days_devotions">
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<div class="day_header">
+						<a href="/day/10">10</a>
+						<span>Ten</span>
+					</div>
+					<div class="day_intro">
+						This would be the intro text that a coordinator put in to introduce
+						the day............ This would be the intro text that a coordinator
+						put in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............
+					</div>
+					<div class="days_devotions">
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<div class="day_header">
+						<a href="/day/2">2</a>
+						<span>Two</span>
+					</div>
+					<div class="day_intro">
+						This would be the intro text that a coordinator put in to introduce
+						the day............ This would be the intro text that a coordinator
+						put in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............
+					</div>
+					<div class="days_devotions">
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="day">
+					<div class="day_header">
+						<a href="/day/1">1</a>
+						<span>One</span>
+					</div>
+					<div class="day_intro">
+						This would be the intro text that a coordinator put in to introduce
+						the day............ This would be the intro text that a coordinator
+						put in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............ This would be the intro text that a coordinator put
+						in to introduce the day............ This would be the intro text
+						that a coordinator put in to introduce the day............ This
+						would be the intro text that a coordinator put in to introduce the
+						day............
+					</div>
+					<div class="days_devotions">
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+						<div class="devotion">
+							<h4 class="devotion_title">
+								A really lovely devotion
+							</h4>
+							<h5 class="devotion_author">
+								Suzi Author
+							</h5>
+							<div class="devotion_verse">
+								<span class="verse_text">
+									Then I decided to put in a Bible verse that will look a little
+									something like this. This is not to say that I acutally feel
+									qualified to write something as important as a Bible verse, I
+									just needed to put an example and was too lazy to cut and
+									paste from Bible Gateway.
+								</span>
+								<span class="verse_reference">
+									Book 14:32-33
+								</span>
+							</div>
+							<div class="devotion_text">
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+								<p>
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure! This would be where the
+									text, images, etc. of a devotion go. People will write
+									devotions! For sure! This would be where the text, images,
+									etc. of a devotion go. People will write devotions! For sure!
+									This would be where the text, images, etc. of a devotion go.
+									People will write devotions! For sure!
+								</p>
+							</div>
+							<div class="devotion_author_bio">
+								<span class="bio_label">
+									About Suzi:
+								</span>
+								<span class="bio_text">
+									This is where someone would write somthing really clever about
+									themselves, that would probably make a lot of people laugh!.
+									Unless they have no sense of humor. In which case, too bad for
+									them!
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="sidebar">
+				<div id="subscription">
+					<h6>Subscribe:</h6>
+					<form id="email_subscription" action="/subscribe_by_email.action">
+						<label for="email">
+							By Email:
+						</label>
+						<input type="text" name="email" />
+						<input type="submit" value="Go!" />
+					</form>
+					<div id="rss_subscription">
+						<label>
+							RSS:
+						</label>
+						<a href="/rss.xml">
+							<img src="../../assets/images/rss.png" />
+						</a>
+					</div>
+				</div>
+				<div id="archives">
+					<h6>Devotions</h6>
+					<div>
+						Archive Calendar goes here
+					</div>
+				</div>
+				<div id="navigation">
+					<h6>User Menu</h6>
+					<ul>
+						<!--<% if contributor_signed_in? %>-->
+							<li>
+								<!--<%= link_to 'My Devotions', devotions_path %>-->
+								<a href="/devotions/my">
+									My Devotions
+								</a>
+							</li>
+							<li>
+								<!-- <%= link_to 'New Devotion', new_devotion_path %> -->
+								<a href="/devotions/new">
+									New Devotion
+								</a>
+							</li>
+							<li>
+								<!-- <%= link_to 'Contributor Log Out', destroy_contributor_session_path, method: :delete %> -->
+								<a href="/user/logout">
+									Logout
+								</a>
+							</li>
+					</ul>
+						<!-- <% else %> -->
+					<h6>User Menu</h6>
+					<ul>
+							<li>
+								<!--
+								<%= render 'subscriptions/form' %>
+								<%= link_to 'Contributor Log In', new_contributor_session_path %>
+								-->
+								<form action="/user/login">
+									<ul>
+										<li>
+											<label for="username">
+												User Name:
+											</label>
+											<input name="username" type="text" />
+										</li>
+										<li>
+											<label for="password">
+												Password:
+											</label>
+											<input name="password" type="password" />
+										</li>
+									</ul>
+									<a href="login">
+										Login
+									</a>
+								</form>
+							</li>
+							<li>
+								<!-- <%= link_to 'Contributor Sign Up', new_contributor_registration_path %> -->
+								<a href="/user/new">
+									Contributor Sign Up
+								</a>
+							</li>
+						<!--<% end %>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
