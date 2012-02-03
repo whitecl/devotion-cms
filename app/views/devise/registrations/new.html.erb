@@ -1,26 +1,16 @@
-<h2>Sign up</h2>
+<h4>Sign up</h4>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <p>We'll add you to the 40 Days mailing list if you're not already on it.</p>
-
-  <div><%= f.label :first_name %><br />
-  <%= f.text_field :first_name %></div>
-
-  <div><%= f.label :last_name %><br />
-  <%= f.text_field :last_name %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+  <%= f.inputs do %>
+    <%= f.input :email, :hint => "We'll add you to the 40 Days mailing list if you're not already on it." %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :password, :as => :password %>
+    <%= f.input :password_confirmation, :as => :password, :required => true %>
+    <%= f.submit "Sign Up" %>
+  <% end %>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

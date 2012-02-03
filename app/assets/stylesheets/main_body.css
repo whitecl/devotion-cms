@@ -12,7 +12,9 @@ div#sidebar {
 	width : 256px;
 }
 
-div.notice, div.alert {
+div.notice,
+div.alert,
+#error_explanation {
 	-moz-border-radius : 5px;
 	-webkit-border-radius : 5px;
 	border-radius : 5px;
@@ -21,6 +23,15 @@ div.notice, div.alert {
 	padding-left : 30px;
 	margin : 5px;
 }
-div.alert {
+div.alert,
+#error_explanation {
 	background : red url(exclamation.png) no-repeat 10px 50%;
+}
+
+
+/*********
+ * For sign up errors
+ *********/
+#error_explanation h2 {
+	font-size : 2em;
 }
