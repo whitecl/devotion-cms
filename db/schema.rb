@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120201020242) do
+ActiveRecord::Schema.define(:version => 20120203021934) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20120201020242) do
     t.integer  "season_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sent_count"
   end
 
   create_table "devotions", :force => true do |t|
