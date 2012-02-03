@@ -12,4 +12,4 @@ then
 	echo "AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')"
 	bundle exec rails console
 fi
-bundle exec rails server
+bash startup_rails.sh
