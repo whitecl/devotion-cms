@@ -82,3 +82,7 @@ h5 {
 h6 {
 	font-size : 1.5em;
 }
+form.formtastic {
+	margin-bottom : 1em;
+	margin-top : 0.5em;
+}
