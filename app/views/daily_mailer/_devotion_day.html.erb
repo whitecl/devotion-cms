@@ -1,0 +1,5 @@
+<p><%= day.coordinator_notes %></p>
+
+<% day.devotions.each do |devotion| %>
+<%= render 'devotion', devotion: devotion %>
+<% end %>

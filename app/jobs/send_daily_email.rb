@@ -2,6 +2,6 @@ class SendDailyEmail
   @queue = 'daily_email'
 
   def self.perform
-    p 'we did it!'
+    DailyMailer.send_daily_devotionals.deliver
   end
 end
