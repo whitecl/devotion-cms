@@ -1,6 +1,18 @@
-<% @subscriber = Subscriber.new unless @subscriber %>
-<p>Sign up to receive 40 Days in a daily email:</p>
-<%= semantic_form_for @subscriber do |f| %>
-  <%= f.inputs :email %>
-  <%= f.submit 'Sign Up!' %>
-<% end %>
+<div id="subscription">
+  <% @subscriber = Subscriber.new unless @subscriber %>
+  <%= semantic_form_for @subscriber do |f| %>
+    <h6>Subscribe to receive 40days reflections by email</h6>
+    <%= f.inputs :email, :label => 'Email:' %>
+    <%= f.submit 'subscribe' %>
+  <% end %>
+  <!--
+  <div id="rss_subscription">
+    <label>
+      RSS:
+    </label>
+    <a href="/rss.xml">
+      <img src="../../assets/images/rss.png" />
+    </a>
+  </div>
+  -->
+</div>

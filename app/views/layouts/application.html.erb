@@ -41,26 +41,10 @@
 			</div>
 
 			<div id="sidebar">
-				<div id="subscription">
-					<h6>Subscribe:</h6>
-					<form id="email_subscription" class="formatastic" action="/subscriptions/">
-						<label for="email">
-							By Email:
-						</label>
-						<input type="text" name="email" />
-						<input type="submit" value="Go!" />
-					</form>
-					<!--
-					<div id="rss_subscription">
-						<label>
-							RSS:
-						</label>
-						<a href="/rss.xml">
-							<img src="../../assets/images/rss.png" />
-						</a>
-					</div>
-					-->
-				</div>
+				<% unless contributor_signed_in? %>
+					<%= render 'subscriptions/form' %>
+				<% end %>
+
 				<div id="archives">
 					<h6>Devotions</h6>
 					<div>
@@ -81,7 +65,6 @@
 								<%= link_to 'Contributor Log Out', destroy_contributor_session_path, method: :delete %>
 					<% else %>
 							<li>
-								<%= render 'subscriptions/form' %>
 								<%= link_to 'Contributor Log In', new_contributor_session_path %>
 							</li>
 							<li>

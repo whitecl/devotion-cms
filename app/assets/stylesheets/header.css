@@ -47,3 +47,12 @@ div#about div {
 div#about div a {
 	color : white;
 }
+
+div#subscription abbr {
+	display: none;
+}
+
+div#subscription h6 {
+	font-size: 14pt;
+}
+
