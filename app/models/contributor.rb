@@ -19,4 +19,17 @@ class Contributor < ActiveRecord::Base
   def add_to_subscribers
     Subscriber.create({:email => self.email})
   end
+
+  # This is temporary, we should be able to generate these scriptomatically.
+  def self.desired_week_strings
+    [
+      'Wed, Feb 22-24',
+      'Mon, Feb 27-Mar 3',
+      'Mon, Mar 5-10',
+      'Mon, Mar 12-17',
+      'Mon, Mar 19-24',
+      'Mon, Mar 26-31',
+      'Mon, Apr 2-7'
+    ]
+  end
 end

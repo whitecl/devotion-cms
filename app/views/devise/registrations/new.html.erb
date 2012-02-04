@@ -1,4 +1,4 @@
-<h5>Sign up</h5>
+<h5>Sign up as a contributor to 40days</h5>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -9,6 +9,12 @@
     <%= f.input :last_name %>
     <%= f.input :password, :as => :password %>
     <%= f.input :password_confirmation, :as => :password, :required => true %>
+
+    <p>Which week would you like your contribution to be distributed? (note: submissions will be due the Monday of the week prior)</p>
+    <%= f.input :desired_week, :label => false, :as => :select, :collection => Contributor.desired_week_strings %>
+
+    <p>Can you give a quick description of your submission idea, poem, song, video, photos, fictional story, devotional, etc and corresponding Bible verse (if known)?</p>
+    <%= f.input :devotion_quick_description, :label => false %>
     <%= f.submit "Sign Up" %>
   <% end %>
 <% end %>

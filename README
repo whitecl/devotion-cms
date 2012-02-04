@@ -81,6 +81,6 @@ Log in as fortydays
   cp fortydays
   git pull
   bundle install
-  RAILS_ENV=staging bundle exec rake db:migrate
-  RAILS_ENV=staging bundle exec rake assets:precompile
+  RAILS_ENV=production bundle exec rake db:migrate
+  RAILS_ENV=production bundle exec rake assets:precompile
   sudo restart fortydays
