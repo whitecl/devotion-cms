@@ -28,3 +28,9 @@
 	font-style : italic;
 	padding : 10px;
 }
+
+#about_page p {
+	padding: 0px 20px 0px 20px;
+	margin-bottom: 20px;
+	font-family: Georgia, sans-serif;
+}

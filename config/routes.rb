@@ -7,7 +7,11 @@ DevotionCms::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :days
+  resources :days do
+    collection do
+      get 'about', :as => 'about'
+    end
+  end
 
   resources :devotions do
     member do
