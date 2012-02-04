@@ -10,3 +10,4 @@ Vagrantfile
 Procfile
 config/resque-pw.yml
 public/system
+public/assets
