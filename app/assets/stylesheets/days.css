@@ -34,3 +34,11 @@
 	margin-bottom: 20px;
 	font-family: Georgia, sans-serif;
 }
+
+#about_page strong {
+	font-weight: bold;
+}
+
+#about_page p.verse {
+	font-style: italic;
+}
