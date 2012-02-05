@@ -6,7 +6,7 @@ class Contributor < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-                  :first_name, :last_name, :coordinator_approved
+                  :first_name, :last_name, :coordinator_approved, :desired_week, :devotion_quick_description
 
   has_many :devotions
 

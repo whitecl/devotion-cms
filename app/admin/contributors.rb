@@ -3,7 +3,7 @@ ActiveAdmin.register Contributor do
     column :first_name
     column :last_name
     column :email
-    column :coordinator_approved
+    column :desired_week
     default_actions
   end
 end
