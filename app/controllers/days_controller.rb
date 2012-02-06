@@ -1,8 +1,10 @@
 class DaysController < ApplicationController
   def index
-    @days = DevotionDay.published.order('publish_date DESC')
+    redirect_day = DevotionDay.published.order('publish_date DESC').first
 
-    if @days.empty?
+    if redirect_day
+      redirect_to day_path(redirect_day.id)
+    else
       redirect_to about_days_path
     end
   end
@@ -10,7 +12,8 @@ class DaysController < ApplicationController
   def show
     @day = DevotionDay.find(params[:id])
 
-    redirect to days_path unless @day
+    redirect_to days_path unless @day
+    redirect_to days_path unless @day.published?
   end
 
   def about

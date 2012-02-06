@@ -1,0 +1,17 @@
+<div id="devotion_calendar">
+
+  <ul id="calendar_nav">
+    <% seasons.each do |season| %>
+      <li data-season-id="<%= season.id %>" <%= 'class=selected' if seasons.first == season %>><%= season.navigation_title %></li>
+    <% end %>
+  </ul>
+
+  <% seasons.each do |season| %>
+    <ul class="season_day_box <%= 'hidden' unless seasons.first == season %>" id="calendar-season-<%= season.id %>">
+      <% season.devotion_days.published.each do |devotion_day| %>
+        <li><%= link_to devotion_day.day_no.to_s, day_path(devotion_day.id) %></li>
+      <% end %>
+    </ul>
+    <div class="clear"></div>
+  <% end %>
+</div>

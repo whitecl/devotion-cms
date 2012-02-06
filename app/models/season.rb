@@ -5,6 +5,12 @@ class Season < ActiveRecord::Base
 
   after_create :generate_devotion_days
 
+  scope :sorted_by_start_date, order(:start_date)
+
+  def has_published_days?
+    self.devotion_days.published.count > 0
+  end
+
   def length_in_days
     (self.end_date - self.start_date).to_i + 1
   end
