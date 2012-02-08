@@ -5,7 +5,7 @@ class Season < ActiveRecord::Base
 
   after_create :generate_devotion_days
 
-  scope :sorted_by_start_date, order(:start_date)
+  scope :sorted_by_start_date, order('start_date DESC')
 
   def has_published_days?
     self.devotion_days.published.count > 0
