@@ -10,6 +10,7 @@ DevotionCms::Application.routes.draw do
   resources :days do
     collection do
       get 'about', :as => 'about'
+      get 'faq', :as => 'faq'
     end
   end
 

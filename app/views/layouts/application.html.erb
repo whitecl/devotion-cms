@@ -54,10 +54,10 @@
 					<ul>
 						<% if contributor_signed_in? %>
 							<li>
-								<%= link_to 'My Devotions', devotions_path %>
+								<%= link_to 'My Reflections', devotions_path %>
 							</li>
 							<li>
-								<%= link_to 'New Devotion', new_devotion_path %>
+								<%= link_to 'New Reflection', new_devotion_path %>
 							</li>
 							<li>
 								<%= link_to 'Contributor Log Out', destroy_contributor_session_path, method: :delete %>
@@ -69,6 +69,13 @@
 								<%= link_to 'Contributor Sign Up', new_contributor_registration_path %>
 							</li>
 						<% end %>
+					</ul>
+				</div>
+
+				<div>
+					<h6>More</h6>
+					<ul>
+						<li><%= link_to '40days FAQ', faq_days_path %></li>
 					</ul>
 				</div>
 			</div>

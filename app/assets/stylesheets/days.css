@@ -29,6 +29,8 @@
 	padding : 10px;
 }
 
+/* About Page */
+
 #about_page p {
 	padding: 0px 20px 0px 20px;
 	margin-bottom: 20px;
@@ -41,4 +43,27 @@
 
 #about_page p.verse {
 	font-style: italic;
+}
+
+/* FAQ page */
+
+div#faq_page {
+	margin-bottom: 25px;
+}
+
+#faq_page ol {
+	list-style: decimal;
+}
+
+#faq_page li {
+	margin-bottom: 10px;
+}
+
+#faq_page li p {
+	margin-bottom: 5px;	
+}
+
+#faq_page li p:first-child {
+	font-size: 15pt;
+	margin-bottom: 10px;
 }
