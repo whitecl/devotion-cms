@@ -1,4 +1,17 @@
-<h5>Sign up as a contributor to 40days</h5>
+<h5>Sign Up</h5>
+
+<p>
+  Signing up as a contributor to 40days allows you to submit writings, poetry,
+  pictures, videos, and other media items for use as reflections during the
+  Lenten season.
+</p>
+
+<%#
+<p>
+  If all you're interested in is receiving the reflections via
+  email, see the < %= link_to 'Subscriptions', % > page.
+</p>
+%>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -10,11 +23,17 @@
     <%= f.input :password, :as => :password %>
     <%= f.input :password_confirmation, :as => :password, :required => true %>
 
-    <p>Which week would you like your contribution to be distributed? (note: submissions will be due the Monday of the week prior)</p>
-    <%= f.input :desired_week, :label => false, :as => :select, :collection => Contributor.desired_week_strings %>
+    <%= f.input :desired_week,
+      :label => "Desired Week",
+      :as => :select,
+      :collection => Contributor.desired_week_strings,
+      :hint => 'Which week would you like your contribution to be distributed? Submissions will be due the Monday of the week <em style="font-style:italic;color:#666">prior</em> to the week you select ensure they are entered in the system cleanly and correctly.'.html_safe
+    %>
 
-    <p>Can you give a quick description of your submission idea, poem, song, video, photos, fictional story, devotional, etc and corresponding Bible verse (if known)?</p>
-    <%= f.input :devotion_quick_description, :label => false %>
+    <%= f.input :devotion_quick_description,
+      :label => 'Description',
+      :hint => 'Can you give a quick description of your submission idea, poem, song, video, photos, fictional story, devotional, etc and corresponding Bible verse (if known)?'
+    %>
     <%= f.submit "Sign Up" %>
   <% end %>
 <% end %>

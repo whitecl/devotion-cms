@@ -7,51 +7,51 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<div id="header">
-			<!--<%= link_to '40 Days', days_path %>-->
-			<div id="logo_container">
-				<%= image_tag "logo.png", {:alt => "logo", :id => "logo"} %>
-			</div>
-			<div id="reflections">
-				<div>
-					...daily reflections for the exodus community
-				</div>
-			</div>
-			<div id="about">
-				<div>
-					<%= link_to 'About 40days', about_days_path %>
-				</div>
-			</div>
-		</div>
-
-		<div id="main_body">
-			<% if !notice.nil? %>
-				<div class="notice">
-					<%= notice %>
-				</div>
-			<% end %>
-			<% if !alert.nil? %>
-				<div class="alert">
-					<%= alert %>
-				</div>
-			<% end %>
-
-			<div id="content_container">
-				<%= yield %>
-			</div>
-
+		<div id="subcontainer">
 			<div id="sidebar">
-				<% unless contributor_signed_in? %>
-					<%= render 'subscriptions/form' %>
-				<% end %>
+
+				<div id="logo_container">
+					<a href="/">
+						<%= image_tag "logo.png", {:alt => "logo", :id => "logo"} %>
+					</a>
+				</div>
 
 				<div id="archives">
-					<h6>Devotions</h6>
+					<h6>Reflections</h6>
 					<%= render 'layouts/calendar', seasons: @navigation_seasons %>
 				</div>
-				<div id="navigation">
-					<h6>User Menu</h6>
+
+				<div id="signup">
+					<%= render 'subscriptions/form' %>
+				</div>
+
+				<div id="exodus">
+					<a href="http://exodusbloomington.org">
+						<%= image_tag "exodus.png", {:alt => "Exodus" } %>
+					</a>
+				</div>
+
+				<% if defined?(@day) and !@day.nil? %>
+					<div id="navigation">
+						<% if @day.has_previous %>
+							<%= link_to '< Previous', day_path(@day.day_no - 1), :id => "previousLink" %>
+						<% end %>
+
+						<% if @day.has_next %>
+							<%= link_to 'Next >', day_path(@day.day_no + 1), :id => "nextLink" %>
+						<% end %>
+					</div>
+				<% end %>
+
+			</div>
+
+
+			<div id="main_body">
+				<div id="header">
 					<ul>
+						<li><%= link_to 'Home', '/' %></li>
+						<li><%= link_to 'About ', about_days_path %></li>
+						<li><%= link_to 'FAQ', faq_days_path %></li>
 						<% if contributor_signed_in? %>
 							<li>
 								<%= link_to 'My Reflections', devotions_path %>
@@ -60,25 +60,37 @@
 								<%= link_to 'New Reflection', new_devotion_path %>
 							</li>
 							<li>
-								<%= link_to 'Contributor Log Out', destroy_contributor_session_path, method: :delete %>
-					<% else %>
+								<%= link_to 'Log Out', destroy_contributor_session_path, method: :delete %>
+							</li>
+						<% else %>
 							<li>
-								<%= link_to 'Contributor Log In', new_contributor_session_path %>
+								<%= link_to 'Log In', new_contributor_session_path %>
 							</li>
 							<li>
-								<%= link_to 'Contributor Sign Up', new_contributor_registration_path %>
+								<%= link_to 'Sign Up', new_contributor_registration_path %>
 							</li>
 						<% end %>
 					</ul>
 				</div>
 
-				<div>
-					<h6>More</h6>
-					<ul>
-						<li><%= link_to '40days FAQ', faq_days_path %></li>
-					</ul>
+				<% if !notice.nil? %>
+					<div class="notice">
+						<%= notice %>
+					</div>
+				<% end %>
+
+				<% if !alert.nil? %>
+					<div class="alert">
+						<%= alert %>
+					</div>
+				<% end %>
+
+				<div id="content_container">
+					<%= yield %>
 				</div>
+
 			</div>
 		</div>
+
 	</body>
 </html>

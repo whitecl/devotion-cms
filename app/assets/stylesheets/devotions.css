@@ -4,8 +4,9 @@
 .devotion * {
 	padding : 5px;
 }
-.devotion_title {
-	border-bottom : 5px solid #d0b7dd;
+.devotion_header {
+	color : #504237;
+	background-color : #f7f7eb;
 }
 
 .devotion_author {
@@ -16,12 +17,20 @@
 
 .devotion_verse {
 	padding : 20px;
-}
-.verse_reference,
-.devotion_author_bio {
 	font-style : italic;
 }
 .devotion_verse,
 .bio_label {
 	font-weight : bold;
+}
+
+.devotion_author_bio {
+	background-color : #504237;
+	padding : 10px;
+}
+.devotion_author_bio * {
+	color : #f7f7eb;
+}
+.bio_label {
+	display: block;
 }

@@ -7,45 +7,8 @@
  *= require rich/editor
  *= require_self
  *= require header
+ *= require sidebar
  *= require main_body
  *= require days
  *= require devotions
 */
-
-
-/* For navigation calendar */
-
-ul#calendar_nav li {
-  display: inline;
-  cursor: pointer;
-}
-
-ul#calendar_nav li.selected {
-  background-color: yellow;
-}
-
-ul.season_day_box {
-  width: 175px;
-}
-
-ul.season_day_box li {
-  float: left;
-  border: 1px solid #000000;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-}
-
-ul.season_day_box a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 14pt;
-}
-
-.hidden {
-  display: none;
-}
-
-div.clear {
-  clear: both;
-}

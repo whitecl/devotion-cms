@@ -1,26 +1,21 @@
 <div class="day">
 	<div class="day_header">
-	<% if multi %>
+		<h4>
+			<% if multi %>
+				<%= link_to "Day #{day.day_no.to_s}", day_path(day) %>
+			<% else %>
+				<%= link_to "#{day.season.title} - Day #{day.day_no.to_s}", day_path(day) %>
+			<% end %>
+			<%#
+			<%= render 'layouts/permalink', object: @day %>
+		</h4>
+	</div>
 
-		<%= link_to "#{day.day_no.to_s}", day_path(day) %>
-		<span>
-			Day <%= day.day_no.to_s %>
-		</span>
-
-
-	<% else %>
-
-		<%= link_to "#{day.day_no.to_s}", day_path(day) %>
-		<span>
-			<%= day.season.title %> - Day <%= day.day_no.to_s %>
-		</span>
-
+	<% if !day.coordinator_notes.nil? and day.coordinator_notes.length > 0 %>
+		<div class="day_intro">
+			<p><%= day.coordinator_notes %></p>
+		</div>
 	<% end %>
-	</div>
-
-	<div class="day_intro">
-		<p><%= day.coordinator_notes %></p>
-	</div>
 
 	<div class="days_devotions">
 		<% day.devotions.each do |devotion| %>

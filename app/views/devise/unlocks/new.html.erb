@@ -1,12 +1,13 @@
 <h5>Resend unlock instructions</h5>
 
-<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= semantic_form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <%= f.inputs do %>
+    <%= f.input :email %>
 
-  <div><%= f.submit "Resend unlock instructions" %></div>
+    <%= f.submit "Resend unlock instructions" %>
+  <% end %>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

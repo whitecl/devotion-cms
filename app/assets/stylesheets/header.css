@@ -1,58 +1,14 @@
-div#header {
-	height : 160px;
-}
-div#header>div {
-	-moz-border-radius : 5px;
-	-webkit-border-radius : 5px;
-	border-radius : 5px;
-	right : 0px;
-}
-div#header div {
-	position : absolute;
-}
-div#logo_container {
-	background : #7b4099;
-	height : 128px;
-	right : auto;
-	width : 100%;
-}
-img#logo {
-	position : absolute;
-	display : block;
-	top : 0.9em;
-	left: 1em;
-}
-div#reflections {
-	background : #d0b7dd;
-	height : 70px;
-	width : 711px;
-	top : 77px;
-}
-div#reflections div {
-	top : 26px;
-	left : 26px;
-	font-size : 1.25em;
-}
-div#about {
-	background-color : #b7f475;
-	height : 35px;
-	text-align : center;
-	top : 125px;
-	width : 150px;
-}
-div#about div {
-	top : 10px;
-	left : 27px;
-}
-div#about div a {
-	color : white;
+#header {
+	background-color : #504237;
+	height : 25px;
+	padding : 10px;
 }
 
-div#subscription abbr {
-	display: none;
+#header * {
+	color : #f7f7eb;
 }
 
-div#subscription h6 {
-	font-size: 14pt;
+#header li {
+	float : left;
+	padding : 5px;
 }
-

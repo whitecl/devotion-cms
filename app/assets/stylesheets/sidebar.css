@@ -1,0 +1,87 @@
+#sidebar {
+	background-color : #f0eedf;
+	float : right;
+	width : 210px;
+	bottom : 0px;
+	top : 0px;
+	right : 0px;
+	font-size : 0.9em;
+}
+
+#sidebar>div {
+	margin : auto 10px;
+	clear : both;
+}
+
+#sidebar #logo_container {
+	margin-top : 20px;
+}
+
+#archives {
+	min-height : 275px;
+	padding : 10px;
+}
+
+#navigation {
+	margin : auto;
+	text-align : center;
+	font-size : 1.2em;
+	padding : 1em;
+}
+
+/* For navigation calendar */
+
+#archives ul {
+	clear : both;
+}
+ul#calendar_nav li {
+	float : left;
+	width : 24%;
+	cursor: pointer;
+	padding : 5px;
+	text-align : center;
+	font-size: 1.1em;
+}
+
+ul#calendar_nav li.selected {
+	background-color : #f7f7eb;
+}
+
+ul.season_day_box {
+	width: 100%;
+}
+
+ul.season_day_box li {
+	background-color : #f7f7eb;
+	float: left;
+	width: 13%; /* ~1/7 of the box */
+	height: 17px;
+	padding-top : 8px;
+	padding-bottom : 8px;
+	text-align: center;
+}
+
+ul.season_day_box a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+div.clear {
+	clear: both;
+}
+
+#subscription span {
+	font-style : italic;
+}
+
+#subscription .formtastic .stringish input {
+	width : 71%;
+}
+
+#sidebar img {
+	width : 85%;
+	margin-left : 0.9em;
+}

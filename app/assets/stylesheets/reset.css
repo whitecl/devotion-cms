@@ -55,12 +55,19 @@ table {
 /******************
  * Customizations
  ******************/
+* {
+	color : #504237;
+	font-family: Georgia, sans-serif;
+}
+body {
+	background-color : #e0decf;
+	font-size : 1.05em;
+}
 body>* {
 	position : relative;
-	clear : both;
-	width : 1024px;
 	margin : auto;
-	margin-top : 1em;
+	width : 800px;
+	height : 100%;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-size : 4em;
@@ -85,4 +92,16 @@ h6 {
 form.formtastic {
 	margin-bottom : 1em;
 	margin-top : 0.5em;
+}
+p {
+	margin : 10px;
+}
+
+img,
+object {
+	max-width : 100% !important;
+}
+
+.formtastic input[type=submit] {
+	font-size : 0.8em;
 }

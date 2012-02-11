@@ -1,15 +1,19 @@
-div#main_body{
-	position : relative;
+div#main_body,
+div#content_container {
+	float : left;
+	width : 590px;
+	background-color : #F7F7EB;
 }
 
-div#content_container{
-	float : left;
-	width : 750px;
-}
-div#sidebar {
-	clear : none;
-	float : right;
-	width : 256px;
+#main_body h1,
+#main_body h2,
+#main_body h3,
+#main_body h4,
+#main_body h5,
+#main_body h6 {
+	background-color : white;
+	padding : 10px;
+	margin : 0px;
 }
 
 div.notice,
@@ -34,4 +38,54 @@ div.alert,
  *********/
 #error_explanation h2 {
 	font-size : 2em;
+}
+
+/*
+ * Permalinks
+ */
+.permalink {
+	text-decoration : none;
+	font-size : 10pt;
+	display : block;
+	float : right;
+}
+
+/* About Page */
+
+#about_page p {
+	padding: 1em;
+	margin-bottom: 20px;
+}
+
+#about_page strong {
+	font-weight: bold;
+}
+
+#about_page p.verse {
+	font-style: italic;
+}
+
+/* FAQ page */
+
+div#faq_page {
+	margin-bottom: 25px;
+	padding : 1em;
+}
+
+#faq_page ol {
+	list-style: decimal;
+	padding-left : 1.5em;
+}
+
+#faq_page li {
+	margin-bottom: 10px;
+}
+
+#faq_page li p {
+	margin-bottom: 5px;
+}
+
+#faq_page li p:first-child {
+	font-size: 15pt;
+	margin-bottom: 10px;
 }

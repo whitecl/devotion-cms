@@ -1,16 +1,16 @@
 <h5>Change your password</h5>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+<%= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div><%= f.label :password, "New password" %><br />
-  <%= f.password_field :password %></div>
+  <%= f.inputs do %>
+    <%= f.input :password "New password" %>
 
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <%= f.input :password_confirmation, "Confirm new password" %>
 
-  <div><%= f.submit "Change my password" %></div>
+    <%= f.submit "Change my password" %>
+  <% end %>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

@@ -1,11 +1,14 @@
 <div class="devotion">
-	<h4 class="devotion_title"><%= devotion.title %></h4>
-	<h5 class="devotion_author"><%= devotion.your_name %></h5>
+	<h5 class="devotion_title">
+		<%= devotion.title %>
+		<%= render 'layouts/permalink', object: @devotion %>
+	</h5>
 
 	<div class="devotion_verse">
 		<span class="verse_text">
-			<%= simple_format(devotion.bible_text) %>
+			<%= devotion.bible_text %>
 		</span>
+		&#8212;
 		<span class="verse_reference">
 			<%= devotion.full_verse_location %>
 		</span>
@@ -13,15 +16,6 @@
 
 	<div class="devotion_text">
 		<%= devotion.content.html_safe %>
-	</div>
-
-	<div class="devotion_author_bio">
-		<span class="bio_label">
-			About <%= devotion.your_name %>:
-		</span>
-		<span class="bio_text">
-			<%= devotion.about_me %>
-		</span>
 	</div>
 
 	<% devotion.videos.each do |video| %>
@@ -32,5 +26,14 @@
 	<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
 	<% end %>
 
-	<p><%= link_to 'Permanent link to this reflection', devotion %></p>
+
+	<div class="devotion_author_bio">
+		<span class="bio_label">
+			<%= devotion.your_name %>
+		</span>
+		<span class="bio_text">
+			<%= devotion.about_me %>
+		</span>
+	</div>
+
 </div>
