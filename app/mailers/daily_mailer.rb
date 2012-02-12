@@ -1,13 +1,13 @@
 class DailyMailer < ActionMailer::Base
-  default from: "devotions@exoworship.com"
+  default from: "info@exoworship.com"
 
-  def send_daily_devotionals
+  def send_daily_devotionals(subscriber_id)
     @day = DevotionDay.for_today.first
 
-    recipients = Subscriber.all
-    @day.sent_count = recipients.count
+    @recipient = Subscriber.find(subscriber_id)
+    @day.sent_count += 1
     @day.save
 
-    mail(:subject => "40 Days - Day #{@day.day_no}", :bcc => recipients.map(&:email))
+    mail(:subject => "40 Days - Day #{@day.day_no}", :to => @recipient.email)
   end
 end

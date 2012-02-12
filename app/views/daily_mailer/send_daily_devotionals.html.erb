@@ -1,1 +1,3 @@
 <%= render 'devotion_day', day: @day %>
+
+<p>You are receiving this email as part of the 40days series of reflections. If you would like to no longer receive these emails in the future, please click here to unsubscribe: <%= link_to 'UNSUBSCRIBE', cancel_subscription_url(@recipient.private_code) %></p>
