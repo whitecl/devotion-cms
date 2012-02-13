@@ -6,7 +6,7 @@
     <%= f.input :password, :as => :password %>
 
     <% if devise_mapping.rememberable? -%>
-      <%= f.input :remember_me, :as => :check_boxes %>
+      <%= f.input :remember_me, :as => :radio %>
     <% end -%>
 
     <%= f.submit "Sign Up" %>
