@@ -12,4 +12,13 @@ class DevotionDay < ActiveRecord::Base
   def title
     season.title.to_s + ' Day ' + self.day_no.to_s 
   end
+
+  def has_previous
+    self.day_no - 1 > 0
+  end
+
+  def has_next
+    self.day_no + 1 < season.length_in_days
+  end
+
 end
