@@ -1,1 +1,1 @@
-bundle exec rails server
+bundle exec thin start
