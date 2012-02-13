@@ -9,11 +9,13 @@
 //= require days
 //= require devotions
 //= require rich
+//= require jquery.equalheights
 
 // For navigation
 
 $(document).ready(function () {
   bind_calendar_navigation();
+  $("#subcontainer > div").equalHeights(600);
 });
 
 function bind_calendar_navigation() {
@@ -22,7 +24,7 @@ function bind_calendar_navigation() {
 
     $('#calendar_nav li').removeClass('selected');
     $(this).addClass('selected');
-    
+
     $('.season_day_box').hide();
     $('#calendar-season-' + target_season_id).fadeIn();
   });
