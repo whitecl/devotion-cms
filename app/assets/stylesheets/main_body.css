@@ -3,6 +3,7 @@ div#content_container {
 	float : left;
 	width : 590px;
 	background-color : #F7F7EB;
+	position : relative;
 }
 
 #main_body h1,
@@ -69,7 +70,7 @@ div.alert,
 
 div#faq_page {
 	margin-bottom: 25px;
-	padding : 1em;
+	padding : 1.25em;
 }
 
 #faq_page ol {
@@ -88,4 +89,21 @@ div#faq_page {
 #faq_page li p:first-child {
 	font-size: 15pt;
 	margin-bottom: 10px;
+}
+
+
+/* contributor forms */
+form.contributor {
+	padding : 1em;
+	padding-left : 1.5em;
+}
+#content_container h5.sign_in,
+#content_container h5.sign_up {
+	padding-left : 24px;
+}
+#content_container p.leftPadded {
+	padding-left : 16px;
+}
+#content_container h5.leftPadded {
+	padding-left : 26px;
 }

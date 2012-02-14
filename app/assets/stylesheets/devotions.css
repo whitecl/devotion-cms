@@ -8,6 +8,9 @@
 	color : #504237;
 	background-color : #f7f7eb;
 }
+#main_body .devotion h5.devotion_title {
+	padding-left : 25px;
+}
 
 .devotion_author {
 	text-align : right;
@@ -25,7 +28,9 @@
 }
 
 .devotion_author_bio {
-	background-color : #504237;
+	/*background-color : #504237;*/
+	background-color : #796353;
+	opacity : 0.5;
 	padding : 10px;
 }
 .devotion_author_bio * {
@@ -33,4 +38,30 @@
 }
 .bio_label {
 	display: block;
+}
+
+.devotion_author_bio.single {
+	width : 100%;
+	position : absolute;
+	bottom : 0px; /* changed via js */
+}
+
+/**
+ * For the editor
+ */
+.devotion strong,
+.devotion b {
+	font-weight : bold;
+}
+.devotion em,
+.devotion i {
+	font-style : italic;
+}
+.devotion sup {
+	font-size : 0.7em;
+	vertical-align : super;
+}
+.devotion sub {
+	font-size : 0.7em;
+	vertical-align : sub;
 }

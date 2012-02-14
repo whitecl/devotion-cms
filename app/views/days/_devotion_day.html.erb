@@ -18,8 +18,16 @@
 	<% end %>
 
 	<div class="days_devotions">
-		<% day.devotions.each do |devotion| %>
-			<%= render 'devotions/devotion', devotion: devotion %>
+		<% if day.devotions.length > 1 %>
+			<% day.devotions.each do |devotion| %>
+				<%= render 'devotions/devotion', devotion: devotion %>
+			<% end %>
+		<% elsif day.devotions.length == 0 %>
+			<%= simple_format('There are no devotions scheduled for today.') %>
+		<% else %>
+			<% day.devotions.each do |devotion| %>
+				<%= render 'devotions/devotion', devotion: devotion, single: true %>
+			<% end %>
 		<% end %>
 	</div>
 </div>

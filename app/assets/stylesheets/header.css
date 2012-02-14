@@ -1,14 +1,18 @@
 #header {
 	background-color : #504237;
 	height : 25px;
-	padding : 10px;
+	padding : 3px;
+	padding-left : 17px;
 }
 
 #header * {
 	color : #f7f7eb;
+	text-decoration : none;
 }
 
 #header li {
 	float : left;
 	padding : 5px;
+	margin-left : 3px;
+	margin-right : 3px;
 }

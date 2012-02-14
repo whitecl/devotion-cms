@@ -27,7 +27,11 @@
 	<% end %>
 
 
-	<div class="devotion_author_bio">
+	<% bio_class = "devotion_author_bio" %>
+	<% if defined?(single) and single %>
+		<% bio_class = "#{bio_class} single" %>
+	<% end %>
+	<div class="<%= bio_class %>">
 		<span class="bio_label">
 			<%= devotion.your_name %>
 		</span>

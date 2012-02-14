@@ -77,6 +77,10 @@ div.clear {
 	font-style : italic;
 }
 
+#subscription abbr {
+	visibility : hidden;
+}
+
 #subscription .formtastic .stringish input {
 	width : 71%;
 }
