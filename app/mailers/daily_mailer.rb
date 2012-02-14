@@ -5,7 +5,11 @@ class DailyMailer < ActionMailer::Base
     @day = DevotionDay.for_today.first
 
     @recipient = Subscriber.find(subscriber_id)
-    @day.sent_count += 1
+    if @day.sent_count   
+      @day.sent_count += 1
+    else
+      @day.sent_count = 1
+    end
     @day.save
 
     mail(:subject => "40 Days - Day #{@day.day_no}", :to => @recipient.email)
