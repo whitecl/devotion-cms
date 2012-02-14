@@ -28,7 +28,6 @@
 }
 
 .devotion_author_bio {
-	/*background-color : #504237;*/
 	background-color : #796353;
 	opacity : 0.5;
 	padding : 10px;
@@ -40,11 +39,13 @@
 	display: block;
 }
 
+/*
 .devotion_author_bio.single {
 	width : 100%;
 	position : absolute;
-	bottom : 0px; /* changed via js */
+	bottom : 0px; / * changed via js * /
 }
+*/
 
 /**
  * For the editor
