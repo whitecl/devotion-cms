@@ -8,6 +8,11 @@
 	font-size : 0.9em;
 }
 
+#logo_container img {
+	margin-top : 11px;
+	max-height : 60px;
+}
+
 #sidebar>div {
 	margin : auto 10px;
 	clear : both;
