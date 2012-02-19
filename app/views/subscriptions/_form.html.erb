@@ -1,5 +1,5 @@
 <div id="subscription">
-  <span>Subscribe to receive 40days reflections by email</span>
+  <span>Subscribe to receive daily reflections by entering your email address:</span>
   <% @subscriber = Subscriber.new unless @subscriber %>
   <%= semantic_form_for @subscriber do |f| %>
     <%= f.inputs :email, :label => 'Email:' %>
