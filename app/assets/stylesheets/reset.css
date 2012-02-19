@@ -57,7 +57,7 @@ table {
  ******************/
 * {
 	color : #504237;
-	font-family: Georgia, sans-serif;
+	font-family: Georgia, serif !important;
 }
 body {
 	background-color : #e0decf;

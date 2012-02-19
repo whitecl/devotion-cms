@@ -15,6 +15,7 @@ div#content_container {
 	background-color : white;
 	padding : 10px;
 	margin : 0px;
+	font-family : "Georgia Bold", Georgia, serif !important;
 }
 
 div.notice,
