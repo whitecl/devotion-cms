@@ -3,11 +3,16 @@
 	height : 25px;
 	padding : 3px;
 	padding-left : 17px;
+	font-size : 0.9em;
 }
 
-#header * {
-	color : #f7f7eb;
+#header a {
+	color : #e0decf;
 	text-decoration : none;
+}
+#header a:hover {
+	color : #f7f7eb;
+	text-decoration : underline;
 }
 
 #header li {
