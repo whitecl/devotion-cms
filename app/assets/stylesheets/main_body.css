@@ -61,8 +61,7 @@ h5 .permalink {
 /* About Page */
 
 #about_page p {
-	padding: 1em;
-	margin-bottom: 20px;
+	margin: 1.25em;
 }
 
 #about_page strong {
