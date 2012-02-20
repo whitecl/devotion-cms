@@ -14,6 +14,7 @@ div#content_container {
 #main_body h6 {
 	background-color : white;
 	padding : 10px;
+	padding-left : 25px;
 	margin : 0px;
 	font-family : "Georgia Bold", Georgia, serif !important;
 	position : relative;

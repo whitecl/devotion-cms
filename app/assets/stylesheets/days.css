@@ -7,10 +7,6 @@
 	text-decoration : none;
 }
 
-div.day_header h4 a {
-	padding-left : 15px;
-}
-
 .day_intro {
 	clear : both;
 	font-style : italic;
