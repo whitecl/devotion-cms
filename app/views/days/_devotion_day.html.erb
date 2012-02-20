@@ -14,13 +14,13 @@
 	<div class="days_devotions">
 		<% if day.devotions.length > 1 %>
 			<% day.devotions.each do |devotion| %>
-				<%= render 'devotions/devotion', devotion: devotion %>
+				<%= render 'devotions/devotion', devotion: devotion, showing_day: true %>
 			<% end %>
 		<% elsif day.devotions.length == 0 %>
 			<%= simple_format('There are no devotions scheduled for today.') %>
 		<% else %>
 			<% day.devotions.each do |devotion| %>
-				<%= render 'devotions/devotion', devotion: devotion, single: true %>
+				<%= render 'devotions/devotion', devotion: devotion, single: true, showing_day: true %>
 			<% end %>
 		<% end %>
 	</div>

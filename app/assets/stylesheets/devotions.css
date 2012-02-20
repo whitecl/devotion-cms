@@ -8,7 +8,8 @@
 	color : #504237;
 	background-color : #f7f7eb;
 }
-#main_body .devotion h5.devotion_title {
+#main_body .devotion h5.devotion_title,
+#main_body .devotion h4.devotion_title {
 	padding-left : 25px;
 }
 

@@ -1,8 +1,16 @@
 <div class="devotion">
-	<h5 class="devotion_title">
+	<% showing_day ||= false %>
+	<% header_type = 'h4' %>
+	<% if showing_day %>
+		<% header_type = 'h5' %>
+	<% end %>
+
+	<%# HACKISH %>
+	<<%= header_type %>	class="devotion_title">
 		<%= devotion.title %>
 		<%= render 'layouts/permalink', object: devotion %>
-	</h5>
+	</<%= header_type %>>
+	<%# END HACKISH %>
 
 	<div class="devotion_verse">
 		<span class="verse_text">
