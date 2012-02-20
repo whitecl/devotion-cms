@@ -1,5 +1,5 @@
 <h5>My Reflections</h5>
-<ul>
+<ul class="devotion_index">
   <% @devotions.each do |devotion| %>
   <li><%= link_to devotion.title, preview_devotion_path(devotion) %> (<%= link_to 'edit', edit_devotion_path(devotion) %>)</li>
   <% end %>

@@ -113,3 +113,9 @@ div#faq_page {
 #content_container h5.leftPadded {
 	padding-left : 26px;
 }
+
+/* devotion index */
+.devotion_index {
+	padding : 25px;
+	min-height : 400px;
+}
