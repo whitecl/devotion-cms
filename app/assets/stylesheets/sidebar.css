@@ -93,9 +93,16 @@ div.clear {
 
 #subscription .formtastic {
 	margin : 1em 0px;
+	position : relative;
 }
 #subscription .formtastic .stringish input {
 	width : 71%;
+}
+
+#subscription .formtastic > input {
+	display : block;
+	position : relative;
+	right : -30%;
 }
 
 #sidebar img {
