@@ -1,5 +1,9 @@
 .devotion {
 	margin-bottom : 20px;
+	font-size : 0.9em;
+}
+.day .devotion {
+	font-size : 1em;
 }
 .devotion * {
 	padding : 5px;
