@@ -91,6 +91,9 @@ div.clear {
 	visibility : hidden;
 }
 
+#subscription .formtastic {
+	margin : 1em 0px;
+}
 #subscription .formtastic .stringish input {
 	width : 71%;
 }

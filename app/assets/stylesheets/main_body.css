@@ -103,10 +103,6 @@ div#faq_page {
 
 
 /* contributor forms */
-form.contributor {
-	padding : 1em;
-	padding-left : 1.5em;
-}
 #content_container h5.sign_in,
 #content_container h5.sign_up {
 	padding-left : 24px;
