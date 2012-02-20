@@ -3,15 +3,9 @@
 <p class="leftPadded">
   Signing up as a contributor to 40days allows you to submit writings, poetry,
   pictures, videos, and other media items for use as reflections during the
-  Lenten season.
+  Lenten season. If all you're interested in is receiving the reflections via
+  email, see the Subscription form on the right.
 </p>
-
-<%#
-<p>
-  If all you're interested in is receiving the reflections via
-  email, see the < %= link_to 'Subscriptions', % > page.
-</p>
-%>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
