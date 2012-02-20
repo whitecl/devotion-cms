@@ -11,12 +11,6 @@
 		</h4>
 	</div>
 
-	<% if !day.coordinator_notes.nil? and day.coordinator_notes.length > 0 %>
-		<div class="day_intro">
-			<p><%= day.coordinator_notes %></p>
-		</div>
-	<% end %>
-
 	<div class="days_devotions">
 		<% if day.devotions.length > 1 %>
 			<% day.devotions.each do |devotion| %>
