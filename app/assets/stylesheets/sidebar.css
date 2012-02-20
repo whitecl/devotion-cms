@@ -78,6 +78,10 @@ div.clear {
 	clear: both;
 }
 
+#subscription {
+	padding : 10px;
+}
+
 #subscription span {
 	font-style : italic;
 }
