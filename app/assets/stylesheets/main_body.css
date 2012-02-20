@@ -16,6 +16,7 @@ div#content_container {
 	padding : 10px;
 	margin : 0px;
 	font-family : "Georgia Bold", Georgia, serif !important;
+	position : relative;
 }
 
 div.notice,
@@ -49,7 +50,12 @@ div.alert,
 	text-decoration : none;
 	font-size : 10pt;
 	display : block;
-	float : right;
+	top : 30%;
+	right : 10px;
+	position : absolute;
+}
+h5 .permalink {
+	top : 25%;
 }
 
 /* About Page */
