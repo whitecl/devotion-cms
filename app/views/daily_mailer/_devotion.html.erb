@@ -9,11 +9,11 @@
 <p><%= devotion.about_me %></p>
 
 <% devotion.videos.each do |video| %>
-<p><%= link_to video.url %></p>
+<p><%= link_to video.url, video.url %></p>
 <% end %>
 
 <% if devotion.attachment_file_name %>
 <p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
 <% end %>
 
-<p><%= link_to 'Permanent link to this devotion', devotion %></p>
+<p><%= link_to 'Permanent link to this devotion', devotion_url(devotion) %></p>

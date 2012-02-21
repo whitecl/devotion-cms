@@ -12,6 +12,6 @@ class DailyMailer < ActionMailer::Base
     end
     @day.save
 
-    mail(:subject => "40 Days - Day #{@day.day_no}", :to => @recipient.email)
+    mail(:subject => "#{@day.season.title} - Day #{@day.day_no}", :to => @recipient.email)
   end
 end
