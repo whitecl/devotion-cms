@@ -5,6 +5,9 @@ ActiveAdmin.register Devotion do
     column :devotion_day
     column :title
     column :your_name
+    column :Preview do |devotion|
+      link_to 'Preview', preview_devotion_path(devotion)
+    end
     default_actions
   end
 

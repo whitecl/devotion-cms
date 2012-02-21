@@ -1,5 +1,5 @@
 class DevotionsController < ApplicationController
-  before_filter :authenticate_contributor!, except: [:show]
+  before_filter :authenticate_contributor!, except: [:show, :preview]
 
   def index
     @contributor = current_contributor
@@ -16,7 +16,7 @@ class DevotionsController < ApplicationController
     @devotion = Devotion.find(params[:id])
 
     # Preview is only ok if devotion is owned by logged-in contributor (maybe coordinators in the future)
-    redirect_to days_path unless @devotion.contributor == current_contributor
+    redirect_to days_path unless @devotion.contributor == current_contributor || admin_user_signed_in?
   end
 
   def new
