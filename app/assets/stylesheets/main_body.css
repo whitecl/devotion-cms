@@ -122,3 +122,17 @@ div#faq_page {
 	padding : 25px;
 	min-height : 400px;
 }
+
+/* forms */
+#main_body .formtastic label {
+	width : 37%;
+}
+#main_body .formtastic ol.choices-group,
+#main_body .formtastic .select select,
+#main_body .formtastic .text textarea,
+#main_body .formtastic .stringish input {
+	width : 61%;
+}
+#main_body .formtastic ol.choices-group {
+	padding-left : 38%;
+}
