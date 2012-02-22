@@ -7,7 +7,7 @@
     <%= f.input :bible_text %>
     <%= f.input :content, as: :rich %>
     <%= f.input :your_name %>
-    <%= f.input :about_me %>
+    <%= f.input :about_me, :input_html => {:rows => 7} %>
 
     <%= f.inputs :for => :videos do |v|%>
 
