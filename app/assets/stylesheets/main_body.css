@@ -124,15 +124,18 @@ div#faq_page {
 }
 
 /* forms */
-#main_body .formtastic label {
+#main_body.logged_in .formtastic input {
+	width : 71%;
+}
+#main_body.not_logged_in .formtastic label {
 	width : 37%;
 }
-#main_body .formtastic ol.choices-group,
-#main_body .formtastic .select select,
-#main_body .formtastic .text textarea,
-#main_body .formtastic .stringish input {
+#main_body.not_logged_in .formtastic ol.choices-group,
+#main_body.not_logged_in .formtastic .select select,
+#main_body.not_logged_in .formtastic .text textarea,
+#main_body.not_logged_in .formtastic .stringish input {
 	width : 61%;
 }
-#main_body .formtastic ol.choices-group {
+#main_body.not_logged_in .formtastic ol.choices-group {
 	padding-left : 38%;
 }

@@ -7,10 +7,9 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
+		<% logged_in_class = 'not_logged_in' %>
 		<% if contributor_signed_in? %>
 			<% logged_in_class = 'logged_in' %>
-		<% else %>
-			<% logged_in_class = '' %>
 		<% end %>
 		<div id="subcontainer" class="<%= logged_in_class %>">
 			<div id="sidebar">
