@@ -1,4 +1,4 @@
-<h5 class="leftPadded">Sign in</h5>
+<h5 class="leftPadded">Log in</h5>
 
 <%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <%= f.inputs do %>
@@ -9,7 +9,7 @@
       <%= f.input :remember_me, :as => :radio %>
     <% end -%>
 
-    <%= f.submit "Sign In" %>
+    <%= f.submit "Log In" %>
   <% end %>
 <% end %>
 
