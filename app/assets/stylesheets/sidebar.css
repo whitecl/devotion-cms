@@ -95,14 +95,22 @@ div.clear {
 	margin : 1em 0px;
 	position : relative;
 }
+#subscription .formtastic fieldset {
+	width : 55%;
+	float :left;
+}
+#subscription .formtastic label {
+	display : none;
+}
 #subscription .formtastic .stringish input {
-	width : 71%;
+	width : 100%;
 }
 
+/* submit button */
 #subscription .formtastic > input {
 	display : block;
-	position : relative;
-	right : -30%;
+	float : right;
+	margin-top : 2px;
 }
 
 #sidebar img {
