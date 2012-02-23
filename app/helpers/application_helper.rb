@@ -12,4 +12,8 @@ module ApplicationHelper
   def expand_content_urls(content)
     content.gsub('/system', "#{root_url}system")
   end
+
+  def nl2br(string)
+    string.gsub("\n", "<br />")
+  end
 end

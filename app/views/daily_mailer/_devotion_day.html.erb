@@ -1,4 +1,4 @@
-<p><%= day.coordinator_notes %></p>
+<p><%= nl2br(day.coordinator_notes).html_safe %></p>
 
 <% day.devotions.each do |devotion| %>
 <%= render 'devotion', devotion: devotion %>
