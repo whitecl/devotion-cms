@@ -8,4 +8,8 @@ module ApplicationHelper
   def attachment_url(attachment)
     "#{root_url}#{attachment.url.gsub(/^\//, '')}"
   end
+
+  def expand_content_urls(content)
+    content.gsub('/system', "#{root_url}system")
+  end
 end
