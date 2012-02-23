@@ -13,7 +13,7 @@
 <% end %>
 
 <% if devotion.attachment_file_name %>
-<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
+<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', attachment_url(devotion.attachment) %></p>
 <% end %>
 
 <p><%= link_to 'Permanent link to this devotion', devotion_url(devotion) %></p>
