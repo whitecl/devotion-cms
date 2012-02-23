@@ -129,3 +129,8 @@ div#faq_page {
 #main_body.not_logged_in .formtastic ol.choices-group {
 	padding-left : 38%;
 }
+
+/* rich editor */
+html .cke_skin_kama {
+	clear: both;
+}
