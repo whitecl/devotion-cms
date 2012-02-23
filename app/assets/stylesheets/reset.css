@@ -67,7 +67,7 @@ body {
 #subcontainer {
 	position : relative;
 	margin : auto;
-	width : 560px;
+	width : 800px;
 	height : 100%;
 }
 #subcontainer.logged_in {
