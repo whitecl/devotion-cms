@@ -62,6 +62,7 @@ table {
 body {
 	background-color : #e0decf;
 	font-size : 1em;
+	line-height : 1.4;
 }
 #subcontainer {
 	position : relative;
