@@ -50,16 +50,9 @@ div.alert,
 /*
  * Permalinks
  */
-.permalink {
-	text-decoration : none;
-	font-size : 10pt;
-	display : block;
-	top : 30%;
-	right : 10px;
-	position : absolute;
-}
-h5 .permalink {
-	top : 25%;
+#main_body .permalink,
+#main_body .permalink a {
+	padding : 0px;
 }
 
 /* About Page */

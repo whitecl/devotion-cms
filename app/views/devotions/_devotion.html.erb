@@ -8,7 +8,6 @@
 	<%# HACKISH %>
 	<<%= header_type %>	class="devotion_title">
 		<%= devotion.title %>
-		<%= render 'layouts/permalink', object: devotion %>
 	</<%= header_type %>>
 	<%# END HACKISH %>
 
@@ -34,6 +33,9 @@
 	<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
 	<% end %>
 
+	<p>
+		Link to this devotion <%= render 'layouts/permalink', object: devotion, text:'here' %>
+	</p>
 
 	<% bio_class = "devotion_author_bio" %>
 	<% if defined?(single) and single %>
