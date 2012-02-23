@@ -7,11 +7,7 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<% logged_in_class = 'not_logged_in' %>
-		<% if contributor_signed_in? %>
-			<% logged_in_class = 'logged_in' %>
-		<% end %>
-		<div id="subcontainer" class="<%= logged_in_class %>">
+		<div id="subcontainer">
 			<div id="sidebar">
 
 				<div id="logo_container">
@@ -50,7 +46,7 @@
 			</div>
 
 
-			<div id="main_body" class="<%= logged_in_class %>">
+			<div id="main_body">
 				<div id="header">
 					<ul>
 						<li><%= link_to 'Home', '/' %></li>

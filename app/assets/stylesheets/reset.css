@@ -64,14 +64,11 @@ body {
 	font-size : 1em;
 	line-height : 1.4;
 }
-#subcontainer {
+body>* {
 	position : relative;
 	margin : auto;
 	width : 800px;
 	height : 100%;
-}
-#subcontainer.logged_in {
-	width : 710px;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-size : 4em;

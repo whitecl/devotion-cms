@@ -3,9 +3,6 @@ div#main_body {
 	float : left;
 	min-height : 300px;
 }
-div#main_body.logged_in {
-	width : 500px;
-}
 div#main_body,
 div#content_container {
 	background-color : #F7F7EB;
