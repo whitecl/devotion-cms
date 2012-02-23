@@ -5,7 +5,10 @@
     <%= f.input :bible_chapter %>
     <%= f.input :bible_verse %>
     <%= f.input :bible_text %>
-    <%= f.input :content, :as => :rich, :hint => 'Please enter the content of your reflection here.  Text can be formatted using the tools provided.  (Note:  if you copy and paste from Word, you might have to re-format it here.)  Also add any images (.jpg, .gif, or .png) where you would like to see them embedded in the text.' %>
+    <li>
+      <%= simple_format('Please enter the content of your reflection here.  Text can be formatted using the tools provided.  (Note:  if you copy and paste from Word, you might have to re-format it here.)  Also add any images (.jpg, .gif, or .png) where you would like to see them embedded in the text.') %>
+    </li>
+    <%= f.input :content, :as => :rich %>
     <%= f.input :your_name %>
     <%= f.input :about_me, :input_html => {:rows => 7} %>
 
