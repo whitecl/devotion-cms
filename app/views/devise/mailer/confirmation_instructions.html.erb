@@ -1,14 +1,27 @@
 <p>To the wonderful 40days contributor,<p>
 
 <p>
-	First off, let me thank you all for volunteering to participate in the 40days
-	experience this year! It's been a blast in past years, and I expect more of the
-	same this year :) I'm really looking forward to hearing your "stone of
-	remembrance"!
+	Thank you for volunteering to participate in the 40days experience this year!
+	It's been a blast in past years, and I expect more of the same this year :)
+	I'm really looking forward to hearing your "stone of remembrance"!
 </p>
 
 <p>
 	Let me explain a few things about how things will work this year:
+</p>
+
+<p>
+	Before you can follow the instructions below, you'll need to confirm your
+	Contributor account. You can do that at the link below.
+</p>
+
+<p>
+	<%= link_to 'Confirm my account',
+		confirmation_url(
+			@resource,
+			:confirmation_token => @resource.confirmation_token
+		)
+	%>
 </p>
 
 <ol>
@@ -28,21 +41,13 @@
 			take some time to fix it.) So, shy away from using IE right now. I'll try
 			to let you know when the IE bugs are worked out.
 		</p>
-
-		<p>
-			It's important, though, to take a long view of the situation, in addition
-			to the short-term of the current 40 day Lenten season. This is an
-			open-source system built from scratch that will be usable for years for
-			any sort of seasonal devotionals. So, be patient, give us feedback, and
-			note that we'll be adding features as we go.
-		</p>
 	</li>
 
 	<li>
 		How to actually create a reflection:
 		<ol>
 			<li>
-				Log in &amp; Click on "New Reflection" at the top.
+				Log in &amp; click on "New Reflection" at the top.
 			</li>
 			<li>
 				Enter your title, Bible info (be sure to include chapter, verse, &amp;
@@ -109,27 +114,12 @@
 	</li>
 </ol>
 
-<p>
-	One more thing--you'll need to confirm your Contributor account before you can
-	do much of anything.  You can do that at the link below.
-</p>
 
 <p>
-	<%= link_to 'Confirm my account',
-		confirmation_url(
-			@resource,
-			:confirmation_token => @resource.confirmation_token
-		)
-	%>
-</p>
-
-
-<p>
-	I think that's all from me for now; let me know if you have any questions. I'm
-	totally psyched about all the upcoming reflections!
+	Let me know if you have any questions: <%= mail_to 'md7@indiana.edu' %>. Now,
+	let's have a fantastic Lent!
 </p>
 
 <p>
 	Markus
 </p>
-
