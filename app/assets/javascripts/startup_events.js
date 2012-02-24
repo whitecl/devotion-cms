@@ -22,5 +22,14 @@
 
   function fix_heights() {
     $("#subcontainer > div").equalHeights($(window).innerHeight());
+
+    $("ul.season_day_box").each(function() {
+      var $this = $(this);
+      var days = $this.children("li");
+      if (days.length) {
+        var rows = Math.ceil(days.length / 7);
+        $this.height((rows * $(days[0]).outerHeight()) + 'px');
+      }
+    });
   }
 })(jQuery);
