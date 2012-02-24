@@ -12,6 +12,9 @@
     <%= f.input :your_name %>
     <%= f.input :about_me, :input_html => {:rows => 7} %>
 
+    <li>
+      <%= simple_format('For videos, all we need is a link, not the actual video file, so we recommend simply uploading the video clip to YouTube and then pasting in a link to it here.') %>
+    </li>
     <%= f.inputs :for => :videos do |v|%>
 
       <% if v.object.new_record? %>
