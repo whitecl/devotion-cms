@@ -25,6 +25,9 @@
 
       <%= v.input :url %>
     <% end %>
+    <li>
+      <%= simple_format("Attach any other files for your reflection.  (Note that the body of your reflection should go in the 'content' box above--this is only for supplementary materials or for media we can't display in text form.)  These files will be available for download whenever a devotion is displayed.") %>
+    </li>
     <%= f.input :attachment, as: :file %>
   <% end %>
   <p>Your reflection can only be seen by you and the 40days coordinators until the day it is published.</p>
