@@ -11,6 +11,10 @@ class Season < ActiveRecord::Base
     self.devotion_days.published.count > 0
   end
 
+  def published_day_count
+    self.devotion_days.published.count
+  end
+
   def length_in_days
     (self.end_date - self.start_date).to_i + 1
   end

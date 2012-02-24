@@ -18,7 +18,7 @@ class DevotionDay < ActiveRecord::Base
   end
 
   def has_next
-    self.day_no + 1 < season.length_in_days
+    self.day_no < season.published_day_count
   end
 
 end
