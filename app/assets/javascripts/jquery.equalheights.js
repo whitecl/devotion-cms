@@ -19,35 +19,28 @@
 
 (function($) {
 	$.fn.equalHeights = function(minHeight, maxHeight) {
-		// CRB
-		// tallest = (minHeight) ? minHeight : 0;
-		var tallest = (minHeight) ? minHeight : 0;
+		minHeight = minHeight || 0;
+		maxHeight = maxHeight || false;
+		var tallest = minHeight || 0;
 		var innerHeight = 0;
 		var padding = 0;
 		var $this = null;
-		// END CRB
-		this.each(function() {
-			// CRB
-			//if($(this).height() > tallest) {
-				//tallest = $(this).height();
-			//}
+		this.height('auto').each(function() {
 			$this = $(this);
 			innerHeight = $this.innerHeight();
 			if(innerHeight > tallest) {
 				tallest = innerHeight;
 			}
-			// END CRB
 		});
-		if((maxHeight) && tallest > maxHeight) tallest = maxHeight;
+		if(maxHeight && tallest > maxHeight) {
+			tallest = maxHeight;
+		}
 		return this.each(function() {
-			// CRB
-			//$(this).height(tallest).css("overflow","auto");
 			$this = $(this);
 			padding = $this.innerHeight() - $this.height();
 			$this.height(
 				tallest - padding
 			).css("overflow","off");
-			// end CRB
 		});
 	}
 })(jQuery);
