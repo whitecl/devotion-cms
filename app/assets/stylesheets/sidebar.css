@@ -53,14 +53,13 @@ ul#calendar_nav li.selected {
 }
 
 ul.season_day_box {
-	width: 100%;
+	width: 168px;
 	background-color : #f7f7eb;
 }
 
 ul.season_day_box li {
-	background-color : #f7f7eb;
 	float: left;
-	width: 24px; /* ~1/7 of the box */
+	width: 24px; /* 1/7 of the box */
 	height: 24px;
 	text-align: center;
 }
