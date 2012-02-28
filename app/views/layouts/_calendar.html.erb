@@ -1,10 +1,4 @@
 <% current_season = seasons.first %>
-<% if !day.nil? %>
-  <% current_season = day.season %>
-  <% session[:current_season] = current_season %>
-<% elsif !session[:current_season].nil? %>
-  <% current_season = session[:current_season] %>
-<% end %>
 
 <div id="devotion_calendar">
 
