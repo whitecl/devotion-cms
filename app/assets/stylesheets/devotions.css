@@ -1,6 +1,9 @@
 .devotion {
-	margin-bottom : 20px;
+	margin-top : 20px;
 	font-size : 0.9em;
+}
+.devotion:first-child {
+	margin-top : 0px;
 }
 .day .devotion {
 	font-size : 1em;
