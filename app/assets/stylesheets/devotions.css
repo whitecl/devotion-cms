@@ -44,6 +44,9 @@
 .bio_label {
 	display: block;
 }
+.bio_text {
+	font-style: italic;
+}
 
 /*
 .devotion_author_bio.single {
