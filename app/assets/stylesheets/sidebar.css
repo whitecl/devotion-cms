@@ -32,6 +32,12 @@
 	font-size : 1.2em;
 	padding : 1em 0px;
 }
+#navigation a {
+	text-decoration : none;
+}
+#navigation a:hover {
+	text-decoration : underline;
+}
 
 /* For navigation calendar */
 
