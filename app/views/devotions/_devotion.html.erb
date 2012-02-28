@@ -28,10 +28,6 @@
 		<% if devotion.attachment_file_name %>
 		<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
 		<% end %>
-
-		<p>
-			Link to this devotion <%= render 'layouts/permalink', object: devotion, text:'here' %>
-		</p>
 	</div>
 
 	<% bio_class = "devotion_author_bio" %>
