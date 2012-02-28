@@ -7,6 +7,11 @@
   });
 
   $(window).resize(fix_heights);
+  // ensure the columns are the right heights after the images load
+  $(window).load(function () {
+    fix_heights();
+  });
+
 
   function bind_calendar_navigation() {
     $("#calendar_nav li").click(function() {
