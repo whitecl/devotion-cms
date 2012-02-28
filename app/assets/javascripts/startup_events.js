@@ -19,7 +19,8 @@
       $('#calendar-season-' + target_season_id).fadeIn("fast", function () {
         fix_heights();
       });
-    }).filter('.selected').click();
+    });
+    $("#calendar_nav li.selected").click();
   }
 
   function fix_heights() {
