@@ -37,7 +37,9 @@
 							<% if @day.has_previous %>
 								<%= link_to '< Previous', day_path(@day.day_no - 1), :id => "previousLink" %>
 							<% end %>
-
+							<% if @day.has_previous and @day.has_next %>
+								&#160; &#160; &#160; &#160;
+							<% end %>
 							<% if @day.has_next %>
 								<%= link_to 'Next >', day_path(@day.day_no + 1), :id => "nextLink" %>
 							<% end %>
