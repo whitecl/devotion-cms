@@ -16,9 +16,11 @@
       $(this).addClass('selected');
 
       $('.season_day_box').hide();
-      $('#calendar-season-' + target_season_id).fadeIn("fast", function () {
-        fix_heights();
-      });
+      setTimeout(function () {
+        $('#calendar-season-' + target_season_id).fadeIn("fast", function () {
+          fix_heights();
+        });
+      }, 10)
     });
     $("#calendar_nav li.selected").click();
   }
