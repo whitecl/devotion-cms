@@ -1,18 +1,10 @@
 <div class="devotion">
 	<% showing_day ||= false %>
 	<% letter ||= nil %>
-	<% header_type = 'h4' %>
-	<%#
-	<% if showing_day % >
-		<% header_type = 'h5' % >
-	<% end % >
-	#%>
 
-	<%# HACKISH %>
-	<<%= header_type %>	class="devotion_title">
+	<h4	class="devotion_title">
 		Day <%= devotion.devotion_day.day_no %><%= letter if letter %>: <%= devotion.title %>
-	</<%= header_type %>>
-	<%# END HACKISH %>
+	</h4>
 
 	<div class="devotion_text_container">
 		<div class="devotion_verse">
