@@ -1,16 +1,4 @@
 <div class="day">
-	<%#
-	<div class="day_header">
-		<h4>
-			<% if multi % >
-				<%= link_to "Day #{day.day_no.to_s}", day_path(day) % >
-			<% else % >
-				<%= link_to "#{day.season.title} - Day #{day.day_no.to_s}", day_path(day) % >
-			<% end % >
-		</h4>
-	</div>
-	%>
-
 	<div class="days_devotions">
 		<% letters = ('a'..'z').step %>
 		<% if day.devotions.length > 1 %>
