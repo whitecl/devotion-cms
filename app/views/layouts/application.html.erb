@@ -10,38 +10,40 @@
 		<div id="subcontainer">
 			<div id="sidebar">
 
-				<div id="logo_container">
-					<a href="/">
-						<%= image_tag "logo.png", {:alt => "logo", :id => "logo"} %>
-					</a>
-				</div>
-
-				<div id="archives">
-					<h6>Reflections</h6>
-					<%= render 'layouts/calendar', seasons: @navigation_seasons, day: @day %>
-				</div>
-
-				<div id="signup">
-					<%= render 'subscriptions/form' %>
-				</div>
-
-				<div id="exodus">
-					<a href="http://exodusbloomington.org">
-						<%= image_tag "exodus.png", {:alt => "Exodus" } %>
-					</a>
-				</div>
-
-				<% if defined?(@day) and !@day.nil? %>
-					<div id="navigation">
-						<% if @day.has_previous %>
-							<%= link_to '< Previous', day_path(@day.day_no - 1), :id => "previousLink" %>
-						<% end %>
-
-						<% if @day.has_next %>
-							<%= link_to 'Next >', day_path(@day.day_no + 1), :id => "nextLink" %>
-						<% end %>
+				<div id="sidebar_contents">
+					<div id="logo_container">
+						<a href="/">
+							<%= image_tag "logo.png", {:alt => "logo", :id => "logo"} %>
+						</a>
 					</div>
-				<% end %>
+
+					<div id="archives">
+						<h6>Reflections</h6>
+						<%= render 'layouts/calendar', seasons: @navigation_seasons, day: @day %>
+					</div>
+
+					<div id="signup">
+						<%= render 'subscriptions/form' %>
+					</div>
+
+					<div id="exodus">
+						<a href="http://exodusbloomington.org">
+							<%= image_tag "exodus.png", {:alt => "Exodus" } %>
+						</a>
+					</div>
+
+					<% if defined?(@day) and !@day.nil? %>
+						<div id="navigation">
+							<% if @day.has_previous %>
+								<%= link_to '< Previous', day_path(@day.day_no - 1), :id => "previousLink" %>
+							<% end %>
+
+							<% if @day.has_next %>
+								<%= link_to 'Next >', day_path(@day.day_no + 1), :id => "nextLink" %>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
 
 			</div>
 

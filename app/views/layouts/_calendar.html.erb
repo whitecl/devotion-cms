@@ -9,7 +9,7 @@
 <div id="devotion_calendar">
 
   <ul id="calendar_nav">
-    <% seasons.each do |season| %>
+    <% seasons.reverse.each do |season| %>
       <li data-season-id="<%= season.id %>" <%= 'class=selected' if current_season == season %>><%= season.navigation_title %></li>
     <% end %>
   </ul>

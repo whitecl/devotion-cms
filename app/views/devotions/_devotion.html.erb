@@ -1,41 +1,46 @@
 <div class="devotion">
 	<% showing_day ||= false %>
+	<% letter ||= nil %>
 	<% header_type = 'h4' %>
-	<% if showing_day %>
-		<% header_type = 'h5' %>
-	<% end %>
+	<%#
+	<% if showing_day % >
+		<% header_type = 'h5' % >
+	<% end % >
+	#%>
 
 	<%# HACKISH %>
 	<<%= header_type %>	class="devotion_title">
-		<%= devotion.title %>
+		Day <%= devotion.devotion_day.day_no %><%= letter if letter %>: <%= devotion.title %>
 	</<%= header_type %>>
 	<%# END HACKISH %>
 
-	<div class="devotion_verse">
-		<span class="verse_text">
-			<%= devotion.bible_text %>
-		</span>
-		&#8212;
-		<span class="verse_reference">
-			<%= devotion.full_verse_location %>
-		</span>
+	<div class="devotion_text_container">
+		<div class="devotion_verse">
+			<span class="verse_text">
+				<%= devotion.bible_text %>
+			</span>
+			&#8212;
+			<span class="verse_reference">
+				<%= devotion.full_verse_location %>
+			</span>
+		</div>
+
+		<div class="devotion_text">
+			<%= devotion.content.html_safe %>
+		</div>
+
+		<% devotion.videos.each do |video| %>
+		<%= video.embed_block.html_safe %>
+		<% end %>
+
+		<% if devotion.attachment_file_name %>
+		<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
+		<% end %>
+
+		<p>
+			Link to this devotion <%= render 'layouts/permalink', object: devotion, text:'here' %>
+		</p>
 	</div>
-
-	<div class="devotion_text">
-		<%= devotion.content.html_safe %>
-	</div>
-
-	<% devotion.videos.each do |video| %>
-	<%= video.embed_block.html_safe %>
-	<% end %>
-
-	<% if devotion.attachment_file_name %>
-	<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
-	<% end %>
-
-	<p>
-		Link to this devotion <%= render 'layouts/permalink', object: devotion, text:'here' %>
-	</p>
 
 	<% bio_class = "devotion_author_bio" %>
 	<% if defined?(single) and single %>

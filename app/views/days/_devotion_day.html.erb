@@ -1,23 +1,26 @@
 <div class="day">
+	<%#
 	<div class="day_header">
 		<h4>
-			<% if multi %>
-				<%= link_to "Day #{day.day_no.to_s}", day_path(day) %>
-			<% else %>
-				<%= link_to "#{day.season.title} - Day #{day.day_no.to_s}", day_path(day) %>
-			<% end %>
+			<% if multi % >
+				<%= link_to "Day #{day.day_no.to_s}", day_path(day) % >
+			<% else % >
+				<%= link_to "#{day.season.title} - Day #{day.day_no.to_s}", day_path(day) % >
+			<% end % >
 		</h4>
 	</div>
+	%>
 
 	<div class="days_devotions">
+		<% letters = ('a'..'z').step %>
 		<% if day.devotions.length > 1 %>
-			<% day.devotions.each do |devotion| %>
-				<%= render 'devotions/devotion', devotion: devotion, showing_day: true %>
+			<% day.devotions.each_with_index do |devotion, index| %>
+				<%= render 'devotions/devotion', devotion: devotion, showing_day: true, letter: letters[index] %>
 			<% end %>
 		<% elsif day.devotions.length == 0 %>
 			<%= simple_format('There are no devotions scheduled for today.') %>
 		<% else %>
-			<% day.devotions.each do |devotion| %>
+			<% day.devotions.each_with_index do |devotion, index| %>
 				<%= render 'devotions/devotion', devotion: devotion, single: true, showing_day: true %>
 			<% end %>
 		<% end %>

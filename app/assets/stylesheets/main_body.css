@@ -1,5 +1,5 @@
 div#main_body {
-	width : 590px;
+	width : 520px;
 	float : left;
 	min-height : 300px;
 }
@@ -17,10 +17,11 @@ div#content_container {
 #main_body h6 {
 	background-color : white;
 	padding : 10px;
-	padding-left : 25px;
+	padding-left : 30px;
 	margin : 0px;
-	font-family : "Georgia Bold", Georgia, serif !important;
+	font-weight : bold;
 	position : relative;
+	font-size : 22pt;
 }
 
 div.notice,

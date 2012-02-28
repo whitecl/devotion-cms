@@ -1,7 +1,7 @@
 #sidebar {
 	background-color : #f0eedf;
 	float : right;
-	width : 210px;
+	width : 260px;
 	bottom : 0px;
 	top : 0px;
 	right : 0px;
@@ -9,12 +9,11 @@
 }
 
 #logo_container img {
-	margin-top : 11px;
-	max-height : 60px;
+	margin-top : -2px;
 }
 
 #sidebar>div {
-	margin : auto 10px;
+	margin : auto 28px;
 	clear : both;
 }
 
@@ -24,14 +23,14 @@
 
 #archives {
 	min-height : 275px;
-	padding : 10px;
+	padding : 10px 0px;
 }
 
 #navigation {
 	margin : auto;
 	text-align : center;
 	font-size : 1.2em;
-	padding : 1em;
+	padding : 1em 0px;
 }
 
 /* For navigation calendar */
@@ -43,7 +42,7 @@ ul#calendar_nav li {
 	float : left;
 	width : 24%;
 	cursor: pointer;
-	padding : 5px;
+	padding : 7px 6px;
 	text-align : center;
 	font-size: 1.1em;
 }
@@ -53,15 +52,16 @@ ul#calendar_nav li.selected {
 }
 
 ul.season_day_box {
-	width: 168px;
+	width: 200px;
 	background-color : #f7f7eb;
 }
 
 ul.season_day_box li {
 	float: left;
-	width: 24px; /* 1/7 of the box */
-	height: 24px;
+	width: 28px; /* ~1/7 of the box */
+	height: 28px;
 	text-align: center;
+	font-size: 1.1em;
 }
 
 ul.season_day_box a {
@@ -77,7 +77,7 @@ div.clear {
 }
 
 #subscription {
-	padding : 10px;
+	padding : 10px 0px;
 	font-size : 0.9em;
 }
 
@@ -94,7 +94,7 @@ div.clear {
 	position : relative;
 }
 #subscription .formtastic fieldset {
-	width : 55%;
+	width : 65%;
 	float :left;
 }
 #subscription .formtastic label {
@@ -112,6 +112,6 @@ div.clear {
 }
 
 #sidebar img {
-	width : 85%;
-	margin-left : 0.9em;
+	width : 105%;
+	margin-left : -0.1em;
 }

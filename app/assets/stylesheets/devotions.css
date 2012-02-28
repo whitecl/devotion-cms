@@ -5,9 +5,6 @@
 .day .devotion {
 	font-size : 1em;
 }
-.devotion * {
-	padding : 5px;
-}
 .devotion_header {
 	color : #504237;
 	background-color : #f7f7eb;
@@ -19,13 +16,19 @@
 	font-size : 1.5em;
 }
 
-.devotion_verse {
-	padding : 20px 3em;
-	font-style : italic;
+.devotion_text_container {
+	padding : 30px;
 }
-.devotion_verse,
+.devotion_verse {
+	font-style : italic;
+	margin-bottom : 30px;
+}
 .bio_label {
 	font-weight : bold;
+}
+.devotion p {
+	margin : 0px;
+	margin-bottom : 15px;
 }
 
 .devotion_author_bio {
