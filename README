@@ -78,7 +78,7 @@ Start/stop web server & worker process
 
 Updating code & db:
 Log in as fortydays
-  cp fortydays
+  cd fortydays
   git pull
   bundle install
   RAILS_ENV=production bundle exec rake db:migrate
