@@ -9,6 +9,13 @@ ActiveAdmin.register Devotion do
       link_to 'Preview', preview_devotion_path(devotion)
     end
     default_actions
+    column "" do |devotion|
+      unless devotion.attachment_file_name.nil?
+        link_to 'Delete attachment', remove_attachment_devotion_path(devotion.id), :remote => true, :confirm => 'Are you sure you want to delete this attachment?'
+      else
+        ''
+      end
+    end
   end
 
   form do |f|
