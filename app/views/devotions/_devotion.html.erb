@@ -2,9 +2,18 @@
 	<% showing_day ||= false %>
 	<% letter ||= nil %>
 
+	<% if devotion.devotion_day %>
+
 	<h4	class="devotion_title">
 		Day <%= devotion.devotion_day.day_no %><%= letter if letter %>: <%= devotion.title %>
 	</h4>
+
+	<% else %>
+
+	<h4	class="devotion_title"><%= devotion.title %></h4>
+
+	<% end %>
+
 
 	<div class="devotion_text_container">
 		<div class="devotion_verse">
