@@ -42,9 +42,10 @@ class DevotionsController < ApplicationController
     # ask in contributor scope to make sure it belongs to this contributor
     @devotion = @contributor.devotions.find(params[:id])
 
+    redirect_to days_path unless @devotion
+
     @devotion.videos.build
 
-    redirect_to days_path unless @devotion
   end
 
   def update
@@ -58,6 +59,17 @@ class DevotionsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def remove_attachment
+    @contributor = current_contributor
+    # ask in contributor scope to make sure it belongs to this contributor
+    @devotion = @contributor.devotions.find(params[:id])
+
+    redirect_to days_path unless @devotion
+    @devotion.attachment = nil
+    @devotion.save
+
   end
 
   private

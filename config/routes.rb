@@ -17,6 +17,7 @@ DevotionCms::Application.routes.draw do
   resources :devotions do
     member do
       get 'preview'
+      get 'remove_attachment'
     end
   end
 

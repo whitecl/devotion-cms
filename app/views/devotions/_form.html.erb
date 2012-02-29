@@ -29,6 +29,10 @@
       <%= simple_format("Attach any other files for your reflection.  (Note that the body of your reflection should go in the 'content' box above--this is only for supplementary materials or for media we can't display in text form.)  These files will be available for download whenever a devotion is displayed.") %>
     </li>
     <%= f.input :attachment, as: :file %>
+    <% unless @devotion.new_record? || @devotion.attachment_file_name.nil? %>
+    <p id="jq_existing_attachment">You attached <%= @devotion.attachment_file_name %> - <%= link_to 'Delete', remove_attachment_devotion_path(@devotion.id), :remote => true, :confirm => 'Are you sure you want to delete this attachment?' %></p>
+    <p id="jq_attachment_note">Uploading a new attachment will replace this attachment.</p>
+    <% end %>
   <% end %>
   <p>Your reflection can only be seen by you and the 40days coordinators until the day it is published.</p>
   <%= f.buttons do %>
