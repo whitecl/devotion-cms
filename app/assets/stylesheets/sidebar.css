@@ -55,6 +55,7 @@ ul#calendar_nav li {
 
 ul#calendar_nav li.selected {
 	background-color : #f7f7eb;
+	font-weight : bold;
 }
 
 ul.season_day_box {
@@ -68,6 +69,9 @@ ul.season_day_box li {
 	height: 28px;
 	text-align: center;
 	font-size: 1.1em;
+}
+ul.season_day_box li.selected {
+	font-weight : bold;
 }
 
 ul.season_day_box a {

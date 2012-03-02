@@ -11,7 +11,9 @@
   <% seasons.each do |season| %>
     <ul class="season_day_box <%= 'hidden' unless current_season == season %>" id="calendar-season-<%= season.id %>">
       <% season.devotion_days.published.each do |devotion_day| %>
-        <li><%= link_to devotion_day.day_no.to_s, day_path(devotion_day.id) %></li>
+        <li class="season_day_cell<%= " selected" if (!day.nil? and devotion_day == day) %>">
+          <%= link_to devotion_day.day_no.to_s, day_path(devotion_day.id) %>
+        </li>
       <% end %>
     </ul>
     <div class="clear"></div>
