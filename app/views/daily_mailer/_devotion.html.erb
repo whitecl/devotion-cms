@@ -1,19 +1,26 @@
-<h3><%= devotion.title %> by <%= devotion.your_name %></h3>
+<h3 style="font-family:Georgia, serif;"><%= devotion.title %> by <%= devotion.your_name %></h3>
 
-<p><%= devotion.full_verse_location %></p>
-<p><%= simple_format(devotion.bible_text) %></p>
+<p style="font-family:Georgia, serif;">
+	<span>
+		<%= simple_format(devotion.bible_text) %>
+	</span>
+	&#8212;
+	<span>
+		<%= devotion.full_verse_location %>
+	</span>
+</p>
 
-<p><%= expand_content_urls(devotion.content).html_safe %></p>
+<p style="font-family:Georgia, serif;"><%= expand_content_urls(devotion.content).html_safe %></p>
 
-<h4>About <%= devotion.your_name %></h4>
-<p><%= devotion.about_me %></p>
+<h4 style="font-family:Georgia, serif;">About <%= devotion.your_name %></h4>
+<p style="font-family:Georgia, serif;"><%= devotion.about_me %></p>
 
 <% devotion.videos.each do |video| %>
-<p><%= link_to video.url, video.url %></p>
+<p style="font-family:Georgia, serif;"><%= link_to video.url, video.url %></p>
 <% end %>
 
 <% if devotion.attachment_file_name %>
-<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', attachment_url(devotion.attachment) %></p>
+<p style="font-family:Georgia, serif;">Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', attachment_url(devotion.attachment) %></p>
 <% end %>
 
-<p><%= link_to 'Permanent link to this devotion', devotion_url(devotion) %></p>
+<p style="font-family:Georgia, serif;"><%= link_to 'Permanent link to this devotion', devotion_url(devotion) %></p>
