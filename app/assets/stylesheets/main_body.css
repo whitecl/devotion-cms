@@ -2,6 +2,7 @@ div#main_body {
 	width : 520px;
 	float : left;
 	min-height : 300px;
+	overflow : hidden;
 }
 div#main_body,
 div#content_container {

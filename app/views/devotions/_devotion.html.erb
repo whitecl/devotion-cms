@@ -35,7 +35,19 @@
 		<% end %>
 
 		<% if devotion.attachment_file_name %>
-		<p>Download attachment "<%= devotion.attachment_file_name %>": <%= link_to 'Download', devotion.attachment.url %></p>
+		<p>Download attached
+
+		<% attachment_type = 'file' %>
+		<% case devotion.attachment_file_name.split(".")[-1].downcase %>
+			<% when 'png','jpg','jpeg','gif' %>
+				<% attachment_type = 'image' %>
+			<% when 'pdf','doc','docx' %>
+				<% attachment_type = 'document' %>
+			<% when 'mp3','wav','wmv','avi','flv','mov','mp4','mpeg' %>
+				<% attachment_type = 'clip' %>
+		<% end %>
+
+		<%= link_to attachment_type, devotion.attachment.url %></p>
 		<% end %>
 	</div>
 
