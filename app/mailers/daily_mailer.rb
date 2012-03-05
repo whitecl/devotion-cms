@@ -1,5 +1,5 @@
 class DailyMailer < ActionMailer::Base
-  default from: "info@exoworship.com"
+  default from: "40days <info@exoworship.com>"
   helper :application
 
   def send_daily_devotionals(subscriber_id)
