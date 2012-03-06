@@ -14,6 +14,6 @@ module ApplicationHelper
   end
 
   def nl2br(string)
-    string.gsub("\n", "<br />")
+    string.to_s.gsub("\n", "<br />")
   end
 end
