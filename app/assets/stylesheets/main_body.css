@@ -136,3 +136,39 @@ div#faq_page {
 html .cke_skin_kama {
 	clear: both;
 }
+
+/* lists */
+.devotion_text_container ul li,
+.devotion_text_container ol li {
+	list-style-type : disc;
+	list-style-position : inside;
+	padding-left: 1em;
+	text-indent : -1em;
+}
+.devotion_text_container ul ul li,
+.devotion_text_container ol ul li {
+	list-style-type : circle;
+}
+.devotion_text_container ul ul ul li,
+.devotion_text_container ul ol ul li,
+.devotion_text_container ol ul ul li,
+.devotion_text_container ol ol ul li {
+	list-style-type : square;
+}
+.devotion_text_container ol li {
+	list-style-type : decimal;
+}
+.devotion_text_container ul ol li,
+.devotion_text_container ol ol li {
+	list-style-type : upper-alpha;
+}
+.devotion_text_container ol ol ol li,
+.devotion_text_container ol ul ol li,
+.devotion_text_container ul ol ol li,
+.devotion_text_container ul ul ol li {
+	list-style-type : lower-roman;
+}
+.devotion_text_container ul>li:last-child,
+.devotion_text_container ol>li:last-child {
+	margin-bottom : 10px;
+}
