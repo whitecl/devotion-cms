@@ -172,3 +172,8 @@ html .cke_skin_kama {
 .devotion_text_container ol>li:last-child {
 	margin-bottom : 10px;
 }
+
+/*  fix some rich text editor weirdness */
+.devotion_text_container ul>li>ul>ul>li {
+	padding-left: 2em;
+}
