@@ -177,3 +177,9 @@ html .cke_skin_kama {
 .devotion_text_container ul>li>ul>ul>li {
 	padding-left: 2em;
 }
+
+/* Edit form weirdness */
+#content_container .inputs {
+	padding-top:15px;
+	clear: both;
+}
