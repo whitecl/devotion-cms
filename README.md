@@ -1,4 +1,6 @@
-## Production Environment - runs Ubuntu 11.10
+## General Setup
+
+Assumes we're running Ubuntu 11.10.
 
 Before compiling ruby:
 
@@ -32,9 +34,10 @@ In Ubuntu Lucid:
 
 After running `bundle install` and completing db migrations and seeds:
 
-    cp Procfile.example-dev
+    cp Procfile.example-dev Procfile
     bundle exec foreman start
 
+## Staging/Production Modifications
 ### Firewall
 
 In order to run `thin` in the user space, we're doing the following to  `iptables`:
@@ -62,40 +65,39 @@ At the end of each section:
 
 ## Staging/Production Web Server
 
-Configure `rbenv`, `ruby 1.9.2-p290` and `40days` under the `fortydays` user.
+1. Configure `rbenv`, `ruby 1.9.2-p290` and `40days` under the `fortydays` user.
 
-In Ubuntu, make sure the `rbenv` start scripts (see `rbenv` docs) are added to
+2. In Ubuntu, make sure the `rbenv` start scripts (see `rbenv` docs) are added to
 `.profile`
+    - Adding them to `.bashrc` will cause the exported upstart scripts to not be able
+      to use `rbenv`.
 
-- Adding them to `.bashrc` will cause the exported upstart scripts to not be able
-  to use `rbenv`.
+3. Copy `Procfile.example` to `Procfile`.
 
-Copy `Procfile.example` to `Procfile`.
+        bundle install
+        bundle exec foreman export upstart /tmp/upstart -a fortydays -u fortydays
+        sudo cp /tmp/upstart/* /etc/init
 
-    bundle install
-    bundle exec foreman export upstart /tmp/upstart -a fortydays -u fortydays
-    sudo cp /tmp/upstart/* /etc/init
+        sudo vi /etc/init/fortydays.conf
 
-    sudo vi /etc/init/fortydays.conf
+4. Add this to the top to enable start on server reboot:
 
-Add this to the top to enable start on server reboot:
+        start on runlevel [2345]
 
-    start on runlevel [2345]
+5. Now you can use magic start/stop commands.
 
-Now you can use magic start/stop commands.
+        sudo start fortydays
+        sudo restart fortydays
+        sudo stop fortydays
 
-    sudo start fortydays
-    sudo restart fortydays
-    sudo stop fortydays
+    Note: start/restart takes > 60 seconds, so may be a good low-traffic time of day thing to do.
 
-Note: start/restart takes > 60 seconds, so may be a good low-traffic time of day thing to do.
-
-Articles this method is based on:
+References:
 
 -  [Introducing Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html), by David Dollar
 -  [Managing and monitoring your Ruby application with Foreman and Upstart](http://michaelvanrooijen.com/articles/2011/06/08-managing-and-monitoring-your-ruby-application-with-foreman-and-upstart/), by Michael van Rooijen
 
-## Administration in the Staging/Production Environment
+### Administration
 
 Swap `staging` and `production` in these commands as needed.
 
