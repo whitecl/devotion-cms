@@ -1,3 +1,19 @@
+## Introduction
+
+`devotion-cms` is a Ruby on Rails application designed to manage and display
+seasonal devotions.  Simply put, it allows you to define and schedule a series
+of devotions that are released over a period of days or weeks (a "season").
+These devotions can include plain text, YouTube videos, Soundcloud sounds, and
+images, as well as links to any other file type.  (Full support for other media
+types is in the works.)
+
+While designed around the unique quirks of the Lenten season, `devotion-cms` can
+accommadate a wide range of season constraints.
+
+You can see a live example at the [40days](http://exoworship.com/) site, a
+series of Lenten devotions produced by the community of [Exodus Church of
+Bloomington](http://exodusbloomington.org).
+
 ## General Setup
 
 Assumes we're running Ubuntu 11.10.
