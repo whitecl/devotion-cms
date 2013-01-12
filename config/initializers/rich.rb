@@ -28,7 +28,8 @@ if Object.const_defined?("Rich")
     # remember to do let Paperclip re-generate these by running
     #   rake paperclip:refresh CLASS=Rich::RichImage
     config.image_styles = {
-      :thumb => "100x100#"
+      :thumb  => "100x100#",
+      :inline => "500x500>"
     }
     
     # == Allowed styles (in file manager)
@@ -47,7 +48,7 @@ if Object.const_defined?("Rich")
     # The style to insert by default. In addition to the
     # styles defined above you can also use :original to get 
     # the unprocessed file. Make sure this style exists.
-    config.default_style = :thumb
+    config.default_style = :inline
 
 		# == Asset insertion
 		#
