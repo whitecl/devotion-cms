@@ -49,10 +49,7 @@ GEM
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
-    cocaine (0.5.0)
-      climate_control (>= 0.0.3, < 1.0)
+    cocaine (0.3.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -103,10 +100,10 @@ GEM
     multi_json (1.5.0)
     mysql2 (0.3.11)
     orm_adapter (0.0.7)
-    paperclip (2.5.2)
+    paperclip (2.7.4)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
-      cocaine (>= 0.0.2)
+      cocaine (~> 0.3.0)
       mime-types
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -154,13 +151,13 @@ GEM
       redis (>= 2.0.1)
       resque (>= 1.8.0)
       rufus-scheduler
-    rich (0.0.8)
+    rich (1.4.1)
       jquery-rails
       kaminari
       mime-types
       paperclip
       rack-raw-upload
-      rails (>= 3.1.0)
+      rails (>= 3.2.0)
       sass-rails
     ruby-oembed (0.8.8)
     rufus-scheduler (2.0.17)
@@ -213,11 +210,11 @@ DEPENDENCIES
   formtastic (~> 2.2.1)
   jquery-rails (~> 1.0.19)
   mysql2 (~> 0.3.11)
-  paperclip (~> 2.5.2)
+  paperclip (~> 2.7.4)
   rails (= 3.2.11)
   resque (~> 1.19.0)
   resque-scheduler (~> 1.9.9)
-  rich (~> 0.0.8)
+  rich (~> 1.4.1)
   ruby-oembed (~> 0.8.8)
   sass-rails (~> 3.2.5)
   therubyracer (~> 0.9.10)

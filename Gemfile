@@ -24,7 +24,7 @@ gem 'activeadmin', '~> 0.5.1'
 
 # This is for forms and rich text forms
 gem 'formtastic', '~> 2.2.1'
-gem 'rich', '~> 0.0.8'
+gem 'rich', '~> 1.4.1'
 
 # Active admin installs devise anyway, but since we're using it for contributors, let's explicitly set the version.
 gem 'devise', '~> 1.5.3'
@@ -37,7 +37,7 @@ gem 'resque-scheduler', '~> 1.9.9'
 gem 'ruby-oembed', '~> 0.8.8'
 
 # Attaching files - rich already install paperclip, but lets get an explicit version.
-gem 'paperclip', '~> 2.5.2'
+gem 'paperclip', '~> 2.7.4'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
