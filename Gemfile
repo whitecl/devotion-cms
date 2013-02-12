@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.10'
+gem 'rails', '3.1.11'
 
 gem 'mysql2', '~> 0.3.11'
 gem 'therubyracer', '~> 0.9.9'
